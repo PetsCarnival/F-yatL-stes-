@@ -11,9 +11,7 @@
       padding: 2rem;
       background: #f5f5f5;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      /* display:flex; ve min-height:100vh; kaldırıldı */
     }
     header {
       display: flex;
@@ -58,7 +56,6 @@
       transition: background .2s;
     }
     .search-box button:hover { background: #e06c00; }
-
     .camera-btn {
       margin-bottom: 1.5rem;
     }
@@ -78,7 +75,6 @@
       margin: 0 auto;
     }
     .camera-btn button:hover { background: #005bb5; }
-
     #reader {
       width: 90%;
       max-width: 320px;
@@ -87,7 +83,6 @@
       border: 2px dashed #ccc;
       border-radius: 8px;
     }
-
     .result {
       margin-top: 1rem;
       font-size: 1.4rem;
@@ -103,9 +98,8 @@
       margin-bottom: .5rem;
       font-size: 1.6rem;
     }
-
     footer {
-      margin-top: auto;
+      margin-top: 1.5rem; /* yukarı çekildi */
       padding: 1rem 0;
       background: #fff;
       font-size: 1rem;
@@ -128,59 +122,4 @@
   </div>
 
   <div class="camera-btn">
-    <button onclick="startScanner()">📷 Kamera ile okut</button>
-  </div>
-
-  <div id="reader"></div>
-  <div class="result" id="result">Ürün bekleniyor…</div>
-
-  <footer>
-    Barkodu olmayan ürünleri lütfen bizlere sorunuz.
-  </footer>
-
-  <script>
-    let products = [];
-    fetch('products.json')
-      .then(res => res.json())
-      .then(data => products = data);
-
-    function manualSearch() {
-      lookup(document.getElementById('barcodeInput').value);
-    }
-
-    function lookup(code) {
-      const normalized = code.replace(/\D/g, '');
-      const p = products.find(x =>
-        x.barcode.replace(/\D/g, '') === normalized
-      );
-      const el = document.getElementById('result');
-      if (p) {
-        el.innerHTML = `<strong>${p.name}</strong><br>₺ ${p.price.toFixed(2)}`;
-      } else {
-        el.textContent = 'Ürün bulunamadı.';
-      }
-      stopScanner();
-    }
-
-    let scanner;
-    function startScanner() {
-      document.getElementById('reader').style.display = 'block';
-      scanner = new Html5Qrcode("reader");
-      scanner.start(
-        { facingMode: "environment" },
-        { fps: 20, qrbox: 200 },
-        decoded => lookup(decoded),
-        error => {}
-      );
-    }
-
-    function stopScanner() {
-      if (scanner) {
-        scanner.stop();
-        document.getElementById('reader').style.display = 'none';
-      }
-    }
-  </script>
-
-</body>
-</html>
+    <button onclick="startScanner()">📷
