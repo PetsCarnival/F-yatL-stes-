@@ -64,7 +64,6 @@
       max-width: 300px;
       padding: .75rem;
       font-size: 1.1rem;
-      cursor: pointer;
       background: #0073e6;
       color: white;
       border: none;
@@ -72,6 +71,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: background .2s;
       margin: 0 auto;
+      cursor: pointer;
     }
     .camera-btn button:hover { background: #005bb5; }
     #reader {
@@ -98,7 +98,7 @@
       font-size: 1.6rem;
     }
     footer {
-      margin-top: 0.5rem; /* Burayı küçülttük */
+      margin-top: 0.5rem;
       padding: 1rem 0;
       background: #fff;
       font-size: 1rem;
@@ -116,33 +116,4 @@
   </header>
 
   <div class="search-box">
-    <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
-    <button onclick="manualSearch()">Ara</button>
-  </div>
-
-  <div class="camera-btn">
-    <button onclick="startScanner()">📷 Kamera ile okut</button>
-  </div>
-
-  <div id="reader"></div>
-  <div class="result" id="result">Ürün bekleniyor…</div>
-
-  <footer>
-    Barkodu olmayan ürünleri lütfen bizlere sorunuz.
-  </footer>
-
-  <script>
-    let products = [];
-    fetch('products.json')
-      .then(res => res.json())
-      .then(data => products = data);
-
-    function manualSearch() {
-      lookup(document.getElementById('barcodeInput').value);
-    }
-
-    function lookup(code) {
-      const normalized = code.replace(/\D/g, '');
-      const p = products.find(x =>
-        x.barcode.replace(/\D/g, '') === normalized
-      );
+    <in
