@@ -116,8 +116,6 @@
 
   <script>
     let products = [];
-
-    // Ürün listesini products.json'dan yükle
     fetch('products.json')
       .then(res => res.json())
       .then(data => products = data);
