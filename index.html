@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pets Carnival Barkod Sistemi</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 2rem; }
+    header { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-bottom: 2rem; }
+    header img { height: 50px; }
+    header span { color: #FF7F00; font-size: 1.5rem; font-weight: bold; }
+    .search-box { margin-bottom: 1rem; }
+    input { padding: .5rem; width: 200px; }
+    button { padding: .5rem 1rem; margin-left: .5rem; cursor: pointer; }
+    #reader { width: 300px; margin: 1rem auto; }
+    .result { margin-top: 1.5rem; font-size: 1.2rem; }
+  </style>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Pets Carnival Logo">
+    <span>www.petscarnival.com.tr</span>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
+    <button onclick="manualSearch()">Ara</button>
+  </div>
+
+  <button onclick="startScanner()">📷 Kamera ile okut</button>
+  <div id="reader" style="display:none;"></div>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    let products = [];
+
+    // JSON dosyanı yükle (aynı klasörde olmalı)
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => {
+        products = data.filter(item => item.DOKUNMATİKMARKETPROGRAMIÜRÜNLİSTESİ !== 'BARKODU')
+                       .map(item => ({
+                         barcode: item.DOKUNMATİKMARKETPROGRAMIÜRÜNLİSTESİ,
+                         name: item.ÜRÜNAD || 'Ürün Adı Yok',
+                         price: parseFloat(item.FİYAT) || 0
+                       }));
+      });
+
+    function manualSearch() {
+      lookup(document.getElementById('barcodeInput').value.trim());
+    }
+
+    function lookup(code) {
+      const p = products.find(x => x.barcode === code);
+      const el = document.getElementById('result');
+      if (p) {
+        el.innerHTML = `<strong>${p.name}</strong><br>₺ ${p.price.toFixed(2)}`;
+      } else {
+        el.textContent = 'Ürün bulunamadı.';
+      }
+      stopScanner();
+    }
+
+    let html5QrcodeScanner;
+    function startScanner() {
+      document.getElementById('reader').style.display = 'block';
+      html5QrcodeScanner = new Html5Qrcode("reader");
+      html5QrcodeScanner.start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: 250 },
+        decoded => lookup(decoded),
+        _error => {}
+      );
+    }
+    function stopScanner() {
+      if (html5QrcodeScanner) {
+        html5QrcodeScanner.stop();
+        document.getElementById('reader').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
