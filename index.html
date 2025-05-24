@@ -11,7 +11,6 @@
       padding: 2rem;
       background: #f5f5f5;
       margin: 0;
-      /* display:flex; ve min-height:100vh; kaldırıldı */
     }
     header {
       display: flex;
@@ -99,7 +98,7 @@
       font-size: 1.6rem;
     }
     footer {
-      margin-top: 1.5rem; /* yukarı çekildi */
+      margin-top: 0.5rem; /* Burayı küçülttük */
       padding: 1rem 0;
       background: #fff;
       font-size: 1rem;
@@ -122,4 +121,28 @@
   </div>
 
   <div class="camera-btn">
-    <button onclick="startScanner()">📷
+    <button onclick="startScanner()">📷 Kamera ile okut</button>
+  </div>
+
+  <div id="reader"></div>
+  <div class="result" id="result">Ürün bekleniyor…</div>
+
+  <footer>
+    Barkodu olmayan ürünleri lütfen bizlere sorunuz.
+  </footer>
+
+  <script>
+    let products = [];
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => products = data);
+
+    function manualSearch() {
+      lookup(document.getElementById('barcodeInput').value);
+    }
+
+    function lookup(code) {
+      const normalized = code.replace(/\D/g, '');
+      const p = products.find(x =>
+        x.barcode.replace(/\D/g, '') === normalized
+      );
