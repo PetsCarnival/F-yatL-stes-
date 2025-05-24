@@ -14,18 +14,19 @@
     }
     header {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: .5rem;
       margin-bottom: 2rem;
     }
-    header img { height: 60px; }
+    header img {
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
     header span {
       color: #FF7F00;
       font-size: 2rem;
       font-weight: bold;
     }
-
     .search-box {
       margin-bottom: 1.5rem;
     }
@@ -34,7 +35,7 @@
       width: 70%;
       max-width: 300px;
       font-size: 1.1rem;
-      border: 2px solid #ff7f00;
+      border: 2px solid #FF7F00;
       border-radius: 6px;
       outline: none;
     }
@@ -51,7 +52,6 @@
       transition: background .2s;
     }
     .search-box button:hover { background: #e06c00; }
-
     .camera-btn {
       margin-bottom: 1.5rem;
     }
@@ -67,7 +67,6 @@
       transition: background .2s;
     }
     .camera-btn button:hover { background: #005bb5; }
-
     #reader {
       width: 90%;
       max-width: 320px;
@@ -76,7 +75,6 @@
       border: 2px dashed #ccc;
       border-radius: 8px;
     }
-
     .result {
       margin-top: 1rem;
       font-size: 1.4rem;
@@ -144,11 +142,12 @@
       scanner = new Html5Qrcode("reader");
       scanner.start(
         { facingMode: "environment" },
-        { fps: 10, qrbox: 250 },
+        { fps: 20, qrbox: 200 },
         decoded => lookup(decoded),
         error => {}
       );
     }
+
     function stopScanner() {
       if (scanner) {
         scanner.stop();
