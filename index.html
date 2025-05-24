@@ -84,7 +84,6 @@
     }
     .result {
       margin-top: 1rem;
-      font-size: 1.4rem;
       background: white;
       display: inline-block;
       padding: 1rem 1.5rem;
@@ -96,6 +95,11 @@
       display: block;
       margin-bottom: .5rem;
       font-size: 1.6rem;
+    }
+    .result .price {
+      font-size: 1.8rem; /* Fiyat büyüklüğü */
+      font-weight: bold;
+      color: #333;
     }
     footer {
       margin-top: 0.5rem;
@@ -116,4 +120,64 @@
   </header>
 
   <div class="search-box">
-    <in
+    <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
+    <button onclick="manualSearch()">Ara</button>
+  </div>
+
+  <div class="camera-btn">
+    <button onclick="startScanner()">📷 Kamera ile okut</button>
+  </div>
+
+  <div id="reader"></div>
+  <div class="result" id="result">Ürün bekleniyor…</div>
+
+  <footer>
+    Barkodu olmayan ürünleri lütfen bizlere sorunuz.
+  </footer>
+
+  <script>
+    let products = [];
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => products = data);
+
+    function manualSearch() {
+      lookup(document.getElementById('barcodeInput').value);
+    }
+
+    function lookup(code) {
+      const normalized = code.replace(/\D/g, '');
+      const p = products.find(x =>
+        x.barcode.replace(/\D/g, '') === normalized
+      );
+      const el = document.getElementById('result');
+      if (p) {
+        el.innerHTML = `<strong>${p.name}</strong><br><span class="price">₺ ${p.price.toFixed(2)}</span>`;
+      } else {
+        el.textContent = 'Ürün bulunamadı, tekrar okutunuz.';
+      }
+      stopScanner();
+    }
+
+    let scanner;
+    function startScanner() {
+      document.getElementById('reader').style.display = 'block';
+      scanner = new Html5Qrcode("reader");
+      scanner.start(
+        { facingMode: "environment" },
+        { fps: 20, qrbox: 200 },
+        decoded => lookup(decoded),
+        error => {}
+      );
+    }
+
+    function stopScanner() {
+      if (scanner) {
+        scanner.stop();
+        document.getElementById('reader').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
