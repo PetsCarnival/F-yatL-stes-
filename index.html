@@ -80,10 +80,12 @@
     }
     #reader {
       width: 90%;
-      max-width: 320px;
+      max-width: 600px;
+      height: 400px;
       margin: 0 auto 1.5rem;
-      display: none;
-      border: 2px dashed #ccc;
+      background: #000;
+      position: relative;
+      overflow: hidden;
       border-radius: 8px;
     }
     .result {
@@ -114,7 +116,8 @@
       border-top: 1px solid #ddd;
     }
   </style>
-  <script src="https://unpkg.com/html5-qrcode"></script>
+  <!-- QuaggaJS kütüphanesini ekliyoruz -->
+  <script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
 </head>
 <body>
 
@@ -132,6 +135,7 @@
     <button onclick="startScanner()">📷 Kamera ile okut</button>
   </div>
 
+  <!-- QuaggaJS ile video ve canvas bu div içinde işlenecek -->
   <div id="reader"></div>
 
   <div class="result" id="result">Ürün bekleniyor…</div>
@@ -141,16 +145,19 @@
   </footer>
 
   <script>
+    // products.json'dan yükleme yapıp belleğe alıyoruz
     let products = [];
     fetch('products.json')
       .then(res => res.json())
       .then(data => products = data);
 
+    // Manuel arama işlevi
     function manualSearch() {
       const code = document.getElementById('barcodeInput').value;
       lookup(code);
     }
 
+    // Barkodu normalize edip ürün dizisinde arar, sonucu ekrana basar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
@@ -161,43 +168,62 @@
       } else {
         el.textContent = 'Ürün bulunamadı, tekrar okutunuz.';
       }
-      stopScanner();
+      Quagga.stop();
     }
 
-    let scanner;
+    // QuaggaJS tarayıcısını kontrol eden değişken
+    let quaggaInited = false;
 
+    // Kamera ile barkod okutma işlevi
     function startScanner() {
-      document.getElementById('reader').style.display = 'block';
-      scanner = new Html5Qrcode("reader");
+      const readerDiv = document.getElementById('reader');
 
-      Html5Qrcode.getCameras().then(cameras => {
-        const cameraId = cameras.find(cam => cam.label.toLowerCase().includes("back"))?.id || cameras[0].id;
-
-        scanner.start(
-          cameraId,
-          {
-            fps: 15,
-            qrbox: { width: 250, height: 150 },
-            experimentalFeatures: { useBarCodeDetectorIfSupported: true }
+      if (!quaggaInited) {
+        quaggaInited = true;
+        Quagga.init({
+          inputStream: {
+            name: "Live",
+            type: "LiveStream",
+            target: readerDiv,
+            constraints: {
+              facingMode: "environment", // Arka kamerayı zorunlu seç
+              width: { min: 640 },
+              height: { min: 480 }
+            }
           },
-          decodedText => lookup(decodedText),
-          errorMessage => {}
-        ).catch(err => {
-          console.error("Kamera başlatılırken hata:", err);
+          locator: {
+            patchSize: "small",   // Küçük barkodları yakalamayı kolaylaştırır
+            halfSample: true      // Mobil cihaz performansı için görüntüyü yarıya indir
+          },
+          numOfWorkers: navigator.hardwareConcurrency || 4,
+          decoder: {
+            readers: [
+              "ean_reader",     // EAN-13 (genel barkodlar)
+              "ean_8_reader",   // EAN-8 (küçük barkodlar)
+              "code_128_reader",
+              "code_39_reader",
+              "upc_reader",
+              "upc_e_reader"
+            ],
+            multiple: false
+          },
+          locate: true   // Görüntü içindeki barkodun yerini otomatik bul
+        }, function(err) {
+          if (err) {
+            console.error("Quagga init hatası:", err);
+            return;
+          }
+          Quagga.start();
         });
 
-      }).catch(err => {
-        console.error("Kamera listesi alınamadı:", err);
-      });
-    }
-
-    function stopScanner() {
-      if (scanner) {
-        scanner.stop().then(() => {
-          document.getElementById('reader').style.display = 'none';
-        }).catch(err => {
-          console.error("Tarayıcı durdurulurken hata:", err);
+        Quagga.onDetected(function(result) {
+          const code = result.codeResult.code;
+          lookup(code);
         });
+
+      } else {
+        // Daha önceden başlatıldıysa sadece çalıştır
+        Quagga.start();
       }
     }
   </script>

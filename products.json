@@ -165,6 +165,11 @@
     "price": 55.0
   },
   {
+    "barcode": "3182550721745",
+    "name": "ROYAL CANIN HAIRSKIN 4 KG",
+    "price": 1970.0
+  },
+  {
     "barcode": "8681475622809",
     "name": "DOGLIFE ZILLI TOP",
     "price": 40.0
@@ -260,6 +265,46 @@
     "price": 850.0
   },
   {
+    "barcode": "3182550894050",
+    "name": "ROYAL CANIN EXIGENT MINI 3 KG",
+    "price": 1890.0
+  },
+  {
+    "barcode": "3182550793001",
+    "name": "ROYAL CANIN DOG PUPY MINI 2 KG",
+    "price": 1050.0
+  },
+  {
+    "barcode": "3182550737593",
+    "name": "ROYAL CANIN CAT STERILESED 2 KG",
+    "price": 1225.0
+  },
+  {
+    "barcode": "3182550717137",
+    "name": "ROYAL CANIN EXIGENT 2 KG",
+    "price": 1300.0
+  },
+  {
+    "barcode": "3182550702201",
+    "name": "ROYAL CANIN CAT FIT32 2 KG",
+    "price": 1195.0
+  },
+  {
+    "barcode": "3182550756419",
+    "name": "ROYAL CANIN CAT BRİTİSH SHORTHAİR 2 KG",
+    "price": 1500.0
+  },
+  {
+    "barcode": "3182550707312",
+    "name": "ROYAL CANIN CAT MOTHER & BABYCAT 2 KG",
+    "price": 1300.0
+  },
+  {
+    "barcode": "3182550702423",
+    "name": "ROYAL CANIN CAT KITTEN 2 KG",
+    "price": 1225.0
+  },
+  {
     "barcode": "7613036505178",
     "name": "PROPLAN KITTEN 1.5 KG",
     "price": 820.0
@@ -268,6 +313,11 @@
     "barcode": "7613033566387",
     "name": "PROPLAN STERILISED SOMON 1.5 KG",
     "price": 985.0
+  },
+  {
+    "barcode": "7613033566592",
+    "name": "PROPLAN STERILISED HİNDİ 1.5 KG",
+    "price": 1010.0
   },
   {
     "barcode": "7613036505956",
@@ -280,9 +330,54 @@
     "price": 860.0
   },
   {
+    "barcode": "7613033560033",
+    "name": "PROPLAN STERILESED HİNDİ 3 KG",
+    "price": 1380.0
+  },
+  {
+    "barcode": "7613033560064",
+    "name": "PROPLAN STERILESED SOMON 3 KG",
+    "price": 1600.0
+  },
+  {
+    "barcode": "7613036505277",
+    "name": "PROPLAN KITTEN TAVUK 3 KG",
+    "price": 1020.0
+  },
+  {
+    "barcode": "7613035123809",
+    "name": "PROPLAN SMALL & MINI PUPY SOMON 3 KG",
+    "price": 1430.0
+  },
+  {
+    "barcode": "7613035114777",
+    "name": "PROPLAN MEDIUM ADULT SOMON 3 KG",
+    "price": 1585.0
+  },
+  {
+    "barcode": "7613035214811",
+    "name": "PROPLAN MEDIUM PUPY KUZU 3 KG",
+    "price": 1080.0
+  },
+  {
     "barcode": "7613035114838",
     "name": "PROPLAN MEDIUM PUPY SOMON 3 KG",
     "price": 940.0
+  },
+  {
+    "barcode": "3182550867719",
+    "name": "ROYAL CANIN DOG ADULT POODLE 3 KG",
+    "price": 1745.0
+  },
+  {
+    "barcode": "3182550765206",
+    "name": "ROYAL CANIN DOG POODLE PUPY 3 KG",
+    "price": 1850.0
+  },
+  {
+    "barcode": "7613035214798",
+    "name": "PROPLAN MEDIUM ADULT KUZU 3 KG",
+    "price": 1520.0
   },
   {
     "barcode": "7613034819758",
@@ -465,9 +560,9 @@
     "price": 30.0
   },
   {
-    "barcode": "30001794",
-    "name": "MY CAT 5 LT KUM",
-    "price": 60.0
+    "barcode": "30000575",
+    "name": "ÇEKÇEKLI ÇANTA",
+    "price": 2250.0
   },
   {
     "barcode": "30001800",
@@ -727,7 +822,7 @@
   {
     "barcode": "8681999480473",
     "name": "KEDİ TASMASI",
-    "price": 15.0
+    "price": 20.0
   },
   {
     "barcode": "8682315523218",
@@ -820,6 +915,16 @@
     "price": 65.0
   },
   {
+    "barcode": "3182550702317",
+    "name": "ROYAL CANIN SENSIBLE 2 KG",
+    "price": 1225.0
+  },
+  {
+    "barcode": "3182550702614",
+    "name": "ROYAL CANIN CAT PERSIAN ADULT 2 KG",
+    "price": 1500.0
+  },
+  {
     "barcode": "3182550782203",
     "name": "ROYAL CANIN DOG MALTESE",
     "price": 995.0
@@ -828,6 +933,16 @@
     "barcode": "3182550716857",
     "name": "ROYAL CANIN DOG YORKSHIRE",
     "price": 995.0
+  },
+  {
+    "barcode": "3182550721738",
+    "name": "ROYAL CANIN CAT HAIR SKIN 2 KG",
+    "price": 1595.0
+  },
+  {
+    "barcode": "3182550737616",
+    "name": "ROYAL CANIN STR 4 KG",
+    "price": 2150.0
   },
   {
     "barcode": "7613287106452",
@@ -860,6 +975,41 @@
     "price": 150.0
   },
   {
+    "barcode": "3182550702447",
+    "name": "ROYAL CANIN CAT KITTEN 4 KG",
+    "price": 2150.0
+  },
+  {
+    "barcode": "3182550707329",
+    "name": "ROYAL CANIN BABY AND MOTHER 4 KG",
+    "price": 2295.0
+  },
+  {
+    "barcode": "3182550793032",
+    "name": "ROYAL CANIN DOG PUPY MINI 4 KG",
+    "price": 1850.0
+  },
+  {
+    "barcode": "3182550727822",
+    "name": "ROYAL CANIN DOG MINI ADULT 4KG",
+    "price": 1850.0
+  },
+  {
+    "barcode": "3182550708180",
+    "name": "ROYAL CANIN DOG MEDIUM PUPY 4 KG",
+    "price": 1295.0
+  },
+  {
+    "barcode": "3182550732154",
+    "name": "ROYAL CANIN DOG MAXI ADULT 15 KG",
+    "price": 4300.0
+  },
+  {
+    "barcode": "3182550732055",
+    "name": "ROYAL CANIN DOG MAXI PUPY 15 KG",
+    "price": 3850.0
+  },
+  {
     "barcode": "9003579309513",
     "name": "ROYAL CANIN CAT INSTINTIVE",
     "price": 50.0
@@ -890,9 +1040,44 @@
     "price": 68.0
   },
   {
+    "barcode": "8010276021816",
+    "name": "N&D PRIME DOG MINI ADULT KUZU BLUEBERY",
+    "price": 1985.0
+  },
+  {
+    "barcode": "8010276033277",
+    "name": "ND DOG ADULT MINI KUZU BLUEBERY",
+    "price": 2160.0
+  },
+  {
+    "barcode": "8010276033246",
+    "name": "ND DOG PUPY MED. MAX KUZU BLUEBERY",
+    "price": 1005.0
+  },
+  {
+    "barcode": "8010276033239",
+    "name": "ND DOG PUPY MINI KUZU BLUEBERY",
+    "price": 2160.0
+  },
+  {
+    "barcode": "8010276020208",
+    "name": "ND CAT KUZU YABAN MERSINI 1.5 KG",
+    "price": 1600.0
+  },
+  {
+    "barcode": "8010276021021",
+    "name": "ND CAT PRIME TAVUK NAR",
+    "price": 1505.0
+  },
+  {
     "barcode": "8010276035424",
     "name": "ND CAT BILDIRCIN NAR",
     "price": 870.0
+  },
+  {
+    "barcode": "8010276040138",
+    "name": "ND CAT KISIR KUZU YABAN MERSINI",
+    "price": 1745.0
   },
   {
     "barcode": "8010276035820",
@@ -1058,6 +1243,51 @@
     "barcode": "8683642204191",
     "name": "MY DOG GOURME KUZU",
     "price": 30.0
+  },
+  {
+    "barcode": "6342000112024",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 4",
+    "price": 1575.0
+  },
+  {
+    "barcode": "6342000112025",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 5",
+    "price": 1860.0
+  },
+  {
+    "barcode": "3235000135024",
+    "name": "LİNDO LUXURY PLUS DARK BLUE MONT 4",
+    "price": 1860.0
+  },
+  {
+    "barcode": "3235000135025",
+    "name": "LİNDO LUXURY PLUS DARK BLUE MONT 5",
+    "price": 1950.0
+  },
+  {
+    "barcode": "6121000188005",
+    "name": "LİNDO COLLAGE BOSTON SWEAT 5",
+    "price": 1010.0
+  },
+  {
+    "barcode": "6121000188006",
+    "name": "LİNDO COLLAGE BOSTON SWEAT 6",
+    "price": 1035.0
+  },
+  {
+    "barcode": "6111000188004",
+    "name": "LINDO COLLAGE ALL STAR SWEAT 4",
+    "price": 1120.0
+  },
+  {
+    "barcode": "6111000188003",
+    "name": "LINDO COLLAGE ALL STAR SWEAT 3",
+    "price": 1050.0
+  },
+  {
+    "barcode": "7171000288004",
+    "name": "LİNDO AQUA BLACK YAĞMURLUK 4",
+    "price": 1575.0
   },
   {
     "barcode": "8698995005951",
@@ -1965,9 +2195,9 @@
     "price": 30.0
   },
   {
-    "barcode": "8681475635946",
-    "name": "OLTA TÜYLÜ",
-    "price": 30.0
+    "barcode": "8662112931546",
+    "name": "PLASTİK SEYEHAT MAMA KABI",
+    "price": 60.0
   },
   {
     "barcode": "8681475625329",
@@ -2160,6 +2390,41 @@
     "price": 48.0
   },
   {
+    "barcode": "5060255492253",
+    "name": "EVER CLEAN MULTIPLE 10LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060255492161",
+    "name": "EVER CLEAN EXTRA STRONG CLUMPING 10LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060412213080",
+    "name": "EVER CLEAN TOTAL COVER 10LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060255492291",
+    "name": "EVER CLEAN LAVENDER 10 LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060412214148",
+    "name": "EVER CLEAN SPRING GARDEN 10 LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060412212489",
+    "name": "EVER CLEAN FAST AGTING 10 LT",
+    "price": 1150.0
+  },
+  {
+    "barcode": "5060412214117",
+    "name": "EVER CLEAN PAWS 10LT",
+    "price": 1150.0
+  },
+  {
     "barcode": "30002364",
     "name": "ZEYSIL KOLEJ SARI",
     "price": 340.0
@@ -2252,12 +2517,12 @@
   {
     "barcode": "8005852750075",
     "name": "SCHESİR TON SIGIR",
-    "price": 105.0
+    "price": 135.0
   },
   {
     "barcode": "8005852750037",
     "name": "SCHESİR TON BAL. RİNGA",
-    "price": 120.0
+    "price": 135.0
   },
   {
     "barcode": "8005852750129",
@@ -2267,7 +2532,7 @@
   {
     "barcode": "8005852140197",
     "name": "SCHESİR TON BARLAN",
-    "price": 120.0
+    "price": 135.0
   },
   {
     "barcode": "8005852712547",
@@ -2300,6 +2565,31 @@
     "price": 925.0
   },
   {
+    "barcode": "4000498043615",
+    "name": "FLEXİ NEW COMFIRT AÇIK MAVİ M 5M",
+    "price": 1490.0
+  },
+  {
+    "barcode": "4000498043707",
+    "name": "FLEXİ NEWCOMFORT KIRMIZI L",
+    "price": 1615.0
+  },
+  {
+    "barcode": "4000498023204",
+    "name": "FLEXİ NEW CLASİC KIRMIZI S",
+    "price": 1100.0
+  },
+  {
+    "barcode": "4000498023211",
+    "name": "FLEXİ NEW CLASİC MAVİ S",
+    "price": 1100.0
+  },
+  {
+    "barcode": "4000498023228",
+    "name": "FLEXİ NEW CLASİC SİYAH S",
+    "price": 1100.0
+  },
+  {
     "barcode": "4000498032206",
     "name": "FLEXİ NEW CLASİC KIRMIZI M",
     "price": 410.0
@@ -2315,9 +2605,19 @@
     "price": 660.0
   },
   {
+    "barcode": "4000498032305",
+    "name": "FLEXİ NEW CLASİC KIRMIZI L",
+    "price": 1600.0
+  },
+  {
     "barcode": "4000498032312",
     "name": "FLEXİ NEW CLASİC MAVİ L",
     "price": 450.0
+  },
+  {
+    "barcode": "4000498032329",
+    "name": "FLEXİ NEW CLASİC SİYAH L",
+    "price": 1600.0
   },
   {
     "barcode": "4048422149408",
@@ -2343,6 +2643,11 @@
     "barcode": "4048422141372",
     "name": "FURMİNATÖR DOG SHORTHAİR M",
     "price": 840.0
+  },
+  {
+    "barcode": "4048422141105",
+    "name": "FURMİNATÖR DOG SHORTHAİR L",
+    "price": 1400.0
   },
   {
     "barcode": "4048422141259",
@@ -2528,6 +2833,21 @@
     "barcode": "5411290267113",
     "name": "FLAMİNGO TENİS TOPLU PAMUK İP",
     "price": 130.0
+  },
+  {
+    "barcode": "30000803",
+    "name": "CATHOUSE TIRMALAMA BUYUK",
+    "price": 2575.0
+  },
+  {
+    "barcode": "30000810",
+    "name": "CATHOUSE TIRMALAMA EVLI",
+    "price": 1950.0
+  },
+  {
+    "barcode": "8010276041142",
+    "name": "N&D SUPRILINA KUZUN KIZILCIK ADULT 1.5 KG",
+    "price": 1500.0
   },
   {
     "barcode": "30002388",
@@ -2870,6 +3190,31 @@
     "price": 280.0
   },
   {
+    "barcode": "064992523206",
+    "name": "ACANA ADULT SMALL BREED RECIPE 2 KG",
+    "price": 1475.0
+  },
+  {
+    "barcode": "064992502201",
+    "name": "ACANA PUPPY SMALL BREED RECIPE 2 KG",
+    "price": 1475.0
+  },
+  {
+    "barcode": "064992541200",
+    "name": "ACANA RECİFİCA RECIPE 2 KG",
+    "price": 1725.0
+  },
+  {
+    "barcode": "064992714710",
+    "name": "ACANA CAT RGN GRASSLANDS 1.8",
+    "price": 1250.0
+  },
+  {
+    "barcode": "064992714307",
+    "name": "ACANA CAT KITTEN FIRST FEAST 1.8 KG",
+    "price": 1725.0
+  },
+  {
     "barcode": "064992714437",
     "name": "ACANA BOUNTIFUL CATCH 1.8 KG",
     "price": 680.0
@@ -2940,6 +3285,36 @@
     "price": 275.0
   },
   {
+    "barcode": "6342000112021",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 1",
+    "price": 1575.0
+  },
+  {
+    "barcode": "4355000114011",
+    "name": "LINDO JOY YAĞMURLUK NO 1",
+    "price": 1680.0
+  },
+  {
+    "barcode": "7171000288001",
+    "name": "LİNDO AQUA BLACK YAĞMURLUK 1",
+    "price": 1670.0
+  },
+  {
+    "barcode": "7171000288002",
+    "name": "LİNDO AQUA BLACK YAĞMURLUK  2",
+    "price": 1770.0
+  },
+  {
+    "barcode": "7171000288003",
+    "name": "LİNDO AQUA BLACK YAĞMURLUK  3",
+    "price": 1490.0
+  },
+  {
+    "barcode": "7171000288005",
+    "name": "LİNDO AQUA BLACK YAĞMURLUK  5",
+    "price": 1490.0
+  },
+  {
     "barcode": "6121000188001",
     "name": "LİNDO COLLAGE BOSTON SWEAT 1",
     "price": 990.0
@@ -2958,6 +3333,31 @@
     "barcode": "6111000188001",
     "name": "LINDO COLLAGE ALL STAR SWEAT 1",
     "price": 990.0
+  },
+  {
+    "barcode": "6111000188002",
+    "name": "LINDO COLLAGE ALL STAR SWEAT 2",
+    "price": 1050.0
+  },
+  {
+    "barcode": "6111000188005",
+    "name": "LINDO COLLAGE ALL STAR SWEAT 5",
+    "price": 1010.0
+  },
+  {
+    "barcode": "3235000135023",
+    "name": "LİNDO LUXURY PLUS DARK BLUE MONT 3",
+    "price": 1690.0
+  },
+  {
+    "barcode": "3235000135022",
+    "name": "LİNDO LUXURY PLUS DARK BLUE MONT 2",
+    "price": 1620.0
+  },
+  {
+    "barcode": "3235000135021",
+    "name": "LİNDO LUXURY PLUS DARK BLUE MONT 1",
+    "price": 1620.0
   },
   {
     "barcode": "30002500",
@@ -2993,6 +3393,21 @@
     "barcode": "30002579",
     "name": "AKVARYUM LARGE",
     "price": 400.0
+  },
+  {
+    "barcode": "30000582",
+    "name": "TOLETTA USTTEN GIRIS TUVALET",
+    "price": 1200.0
+  },
+  {
+    "barcode": "8680782133855",
+    "name": "DOGGIE SU PINARI",
+    "price": 2580.0
+  },
+  {
+    "barcode": "30002586",
+    "name": "SALINCAK",
+    "price": 1200.0
   },
   {
     "barcode": "30002630",
@@ -3108,6 +3523,11 @@
     "barcode": "8682315524307",
     "name": "CATNIP KEDI OYUN SPREYI",
     "price": 80.0
+  },
+  {
+    "barcode": "8010690111568",
+    "name": "FERPLAST SU ŞELALESİ",
+    "price": 1000.0
   },
   {
     "barcode": "8682232210871",
@@ -3290,6 +3710,11 @@
     "price": 30.0
   },
   {
+    "barcode": "3182550768474",
+    "name": "ROYAL CANIN CAT SATIYETY WEIGHT",
+    "price": 1250.0
+  },
+  {
     "barcode": "8681999485133",
     "name": "GUCCI CANTA",
     "price": 690.0
@@ -3308,6 +3733,11 @@
     "barcode": "30000551",
     "name": "AKVARYUM IŞIKLI KUCUK",
     "price": 500.0
+  },
+  {
+    "barcode": "6925394820253",
+    "name": "SOBO 4 CIKISLI HAVA FILTRESI",
+    "price": 1300.0
   },
   {
     "barcode": "30003095",
@@ -3390,6 +3820,11 @@
     "price": 180.0
   },
   {
+    "barcode": "064992561208",
+    "name": "ACANA RED MEAT PORK AND BEEF",
+    "price": 1770.0
+  },
+  {
     "barcode": "064992562205",
     "name": "ACANA WILD COAST RİNGA BALIK 2 KG",
     "price": 525.0
@@ -3438,6 +3873,11 @@
     "barcode": "8010690111803",
     "name": "FERPLAST ÇİFT TARAFLI TÜY TOPLAYICI",
     "price": 280.0
+  },
+  {
+    "barcode": "30002722",
+    "name": "VIRBAC K DOG",
+    "price": 1730.0
   },
   {
     "barcode": "8680445860326",
@@ -3615,9 +4055,49 @@
     "price": 240.0
   },
   {
+    "barcode": "4025877563348",
+    "name": "MERA PUPPY TURKEY 4 KG",
+    "price": 1975.0
+  },
+  {
+    "barcode": "4025877569340",
+    "name": "MERA JUNIOR HINDI 4 KG",
+    "price": 1700.0
+  },
+  {
+    "barcode": "4025877574344",
+    "name": "MERA BEEF PATATO 4 KG",
+    "price": 2200.0
+  },
+  {
+    "barcode": "4025877576348",
+    "name": "MERA MINI TURKEY 4 KG",
+    "price": 2050.0
+  },
+  {
+    "barcode": "4025877340345",
+    "name": "MERA STERILISED 4 KG",
+    "price": 1650.0
+  },
+  {
+    "barcode": "4025877383304",
+    "name": "MERA KITTEN DUCK 2 KG",
+    "price": 1000.0
+  },
+  {
+    "barcode": "4025877387302",
+    "name": "MERA SENSTIVE INSECT 2 KG",
+    "price": 1200.0
+  },
+  {
     "barcode": "4025877386305",
     "name": "MERA SENSITIVE TAVUK 2 KG",
     "price": 975.0
+  },
+  {
+    "barcode": "4025877385308",
+    "name": "MERA GF ALL CATS SOMON 2 KG",
+    "price": 1300.0
   },
   {
     "barcode": "30002739",
@@ -3657,12 +4137,22 @@
   {
     "barcode": "5060180810405",
     "name": "ANIMOLOGY PAWS RELAX",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180815387",
     "name": "ANIMOLOGY PARFÜM 150ML",
-    "price": 635.0
+    "price": 690.0
+  },
+  {
+    "barcode": "3182550771252",
+    "name": "ROYAL CANIN GASTROINTESTINAL 2 KG",
+    "price": 1595.0
+  },
+  {
+    "barcode": "3182550799645",
+    "name": "ROYAL CANIN SATIYETY BALANCE 3.5 kg",
+    "price": 2095.0
   },
   {
     "barcode": "9681475630643",
@@ -3715,6 +4205,21 @@
     "price": 110.0
   },
   {
+    "barcode": "6171000188001",
+    "name": "LİNDO AQUA YAĞMURLUK 1",
+    "price": 1450.0
+  },
+  {
+    "barcode": "6342000112022",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 2",
+    "price": 1760.0
+  },
+  {
+    "barcode": "30002791",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 3",
+    "price": 1490.0
+  },
+  {
     "barcode": "3245100211057",
     "name": "LİNDO GOST YAĞMURLUK 7",
     "price": 780.0
@@ -3760,6 +4265,26 @@
     "price": 283.0
   },
   {
+    "barcode": "4000498043547",
+    "name": "FLEXİ NEW COM SİYAH S",
+    "price": 1175.0
+  },
+  {
+    "barcode": "4000498043608",
+    "name": "FLEXİ NEW COM ROSE M",
+    "price": 1490.0
+  },
+  {
+    "barcode": "4000498043523",
+    "name": "FLEXİ NEW COM KIRMIZI S",
+    "price": 1250.0
+  },
+  {
+    "barcode": "4000498043516",
+    "name": "FLEXİ NEW COM AÇIK MAVİ S",
+    "price": 1250.0
+  },
+  {
     "barcode": "4000498022528",
     "name": "FLEXİ NEW CLAS SİYAH S İP",
     "price": 760.0
@@ -3768,6 +4293,11 @@
     "barcode": "4000498022535",
     "name": "FLEXİ NEW CLAS PEMBE S",
     "price": 825.0
+  },
+  {
+    "barcode": "052742024431",
+    "name": "HİLLS KEDİ KİTTEN TUNA 7 KG",
+    "price": 1975.0
   },
   {
     "barcode": "6735201003850",
@@ -3865,6 +4395,11 @@
     "price": 625.0
   },
   {
+    "barcode": "064992714642",
+    "name": "ACANA PASİFİCA 1.8 KG",
+    "price": 2360.0
+  },
+  {
     "barcode": "30002913",
     "name": "FLAMINGO BUYUK MAMA KABI 2.500 ML",
     "price": 160.0
@@ -3902,27 +4437,27 @@
   {
     "barcode": "5060180810061",
     "name": "ANIMOLOGY FLEA TICK",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180815141",
     "name": "ANIMOLOGY CURLY COAT",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180810610",
     "name": "ANIMOLOGY KNOT SURE",
-    "price": 685.0
+    "price": 690.0
   },
   {
     "barcode": "5060180815325",
     "name": "ANIMOLOGY STAR PUPS PARFÜM",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180816766",
     "name": "ANIMOLOGY HOT DOG PARFÜM",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180816797",
@@ -4017,12 +4552,17 @@
   {
     "barcode": "8005852750082",
     "name": "SCHESİR TON BALIĞI DENİZ BİTKİLİ",
-    "price": 105.0
+    "price": 135.0
   },
   {
     "barcode": "8005852750501",
     "name": "SCHESİR TON BALIKLI TAVUKLU VE PİRİNÇLİ",
     "price": 38.5
+  },
+  {
+    "barcode": "8680782133862",
+    "name": "DOGGIE SU PINARI",
+    "price": 2580.0
   },
   {
     "barcode": "8005852615619",
@@ -4040,8 +4580,13 @@
     "price": 60.0
   },
   {
+    "barcode": "3182550932707",
+    "name": "ROYAL CANIN DOG MINI STARTER 4 KG",
+    "price": 1995.0
+  },
+  {
     "barcode": "30002982",
-    "name": "KIYAFET 1",
+    "name": "KIYAFET MAVI ATLET",
     "price": 200.0
   },
   {
@@ -4625,6 +5170,11 @@
     "price": 920.0
   },
   {
+    "barcode": "8680782107023",
+    "name": "DOGGIE GUCLU BOYUN TASMASI",
+    "price": 1040.0
+  },
+  {
     "barcode": "8680782107030",
     "name": "DOGGIE BOYUN TASMASI",
     "price": 940.0
@@ -4633,6 +5183,11 @@
     "barcode": "8680782107047",
     "name": "DOGGIE GUCLU DERI BOYUN TASMA",
     "price": 385.0
+  },
+  {
+    "barcode": "8680782107054",
+    "name": "DOGGIE GUCLU BOYUN TASMASI",
+    "price": 1010.0
   },
   {
     "barcode": "8680782107061",
@@ -5135,6 +5690,11 @@
     "price": 245.0
   },
   {
+    "barcode": "30003163",
+    "name": "ROYAL CANIN S/O DOG",
+    "price": 1215.0
+  },
+  {
     "barcode": "5400585032345",
     "name": "FLAMINGO CHEWING TOY",
     "price": 65.0
@@ -5415,9 +5975,59 @@
     "price": 80.0
   },
   {
+    "barcode": "6171000188002",
+    "name": "LINDO AQUA YAĞMURLUK 2",
+    "price": 1770.0
+  },
+  {
+    "barcode": "6171000188003",
+    "name": "LİNDO AQUA YAĞMURLUK 3",
+    "price": 1490.0
+  },
+  {
+    "barcode": "6171000188004",
+    "name": "LİNDO AQUA YAĞMURLUK 4",
+    "price": 1560.0
+  },
+  {
+    "barcode": "6171000188007",
+    "name": "LİNDO AQUA YAĞMURLUK 7",
+    "price": 1550.0
+  },
+  {
+    "barcode": "6342000112020",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 0",
+    "price": 1670.0
+  },
+  {
+    "barcode": "6342000112023",
+    "name": "LİNDO COSMO PLUS YAĞMURLUK 3",
+    "price": 1300.0
+  },
+  {
+    "barcode": "4355000114012",
+    "name": "LINDO JOY YAĞMURLUK NO 2",
+    "price": 1770.0
+  },
+  {
+    "barcode": "4355000114013",
+    "name": "LINDO JOY YAĞMURLUK NO 3",
+    "price": 1770.0
+  },
+  {
+    "barcode": "4355000114017",
+    "name": "LINDO JOY YAĞMURLUK NO 7",
+    "price": 1950.0
+  },
+  {
     "barcode": "5354000113013",
     "name": "LINDO BLUE STAR NO 3",
     "price": 700.0
+  },
+  {
+    "barcode": "5354000113015",
+    "name": "LINDO BLUE STAR NO 5",
+    "price": 1860.0
   },
   {
     "barcode": "5354000113017",
@@ -5765,6 +6375,16 @@
     "price": 140.0
   },
   {
+    "barcode": "30003378",
+    "name": "ND OCEAN MORINA BALIKLI",
+    "price": 1480.0
+  },
+  {
+    "barcode": "8010276032584",
+    "name": "N&D TAVUK NAR KITTEN 1.5 KG",
+    "price": 1600.0
+  },
+  {
     "barcode": "6900631780071",
     "name": "FOR PET DİŞ FIRÇA",
     "price": 60.0
@@ -5783,6 +6403,11 @@
     "barcode": "3182550721219",
     "name": "ROYAL CANIN PERSİAN KİTTEN",
     "price": 870.0
+  },
+  {
+    "barcode": "3182550721400",
+    "name": "ROYAL CANIN CARE HAIRBALL",
+    "price": 1595.0
   },
   {
     "barcode": "7908248300544",
@@ -5905,6 +6530,11 @@
     "price": 222.5
   },
   {
+    "barcode": "064992570200",
+    "name": "ACANA GRASS FIT LAMB 2 KG",
+    "price": 2070.0
+  },
+  {
     "barcode": "4002064406268",
     "name": "GIM CAT LATTE MILK",
     "price": 150.0
@@ -5940,6 +6570,11 @@
     "price": 100.0
   },
   {
+    "barcode": "7613036611268",
+    "name": "PROPLAN SMALL MINI ADULT KUZU 3 KG",
+    "price": 1400.0
+  },
+  {
     "barcode": "8683497040029",
     "name": "PLAY FULL YUMUŞAK TOP",
     "price": 80.0
@@ -5970,9 +6605,24 @@
     "price": 120.0
   },
   {
+    "barcode": "4000498043530",
+    "name": "NEW COMFORT MAVİ S 5M",
+    "price": 1250.0
+  },
+  {
     "barcode": "4000498043639",
     "name": "FLEXI NEW COMFORT MAVİ M 5 M",
     "price": 890.0
+  },
+  {
+    "barcode": "4000498043646",
+    "name": "FLEXI NEW COMFORT AÇIK MAVI M 5M",
+    "price": 1120.0
+  },
+  {
+    "barcode": "4000498043622",
+    "name": "FLEXI NEW COMFORT KIRMIZI M 5M",
+    "price": 1490.0
   },
   {
     "barcode": "4000498043448",
@@ -5980,9 +6630,29 @@
     "price": 340.0
   },
   {
+    "barcode": "4000498043721",
+    "name": "FLEXI NEW COMFORT L SIYAH 5M",
+    "price": 1615.0
+  },
+  {
+    "barcode": "4355000114015",
+    "name": "LINDO JOY YAĞMURLUK NO 5",
+    "price": 1560.0
+  },
+  {
+    "barcode": "6171000188005",
+    "name": "LINDO AQUA YAĞMURLUK NO 5",
+    "price": 1860.0
+  },
+  {
     "barcode": "30003576",
     "name": "LİNDO AQUA BLACK YAĞMURLUK 6",
     "price": 780.0
+  },
+  {
+    "barcode": "6342000112026",
+    "name": "LİNDO COSMOS YAĞMURLUK 6",
+    "price": 1950.0
   },
   {
     "barcode": "6953182714651",
@@ -6003,6 +6673,11 @@
     "barcode": "8681475630972",
     "name": "CATLİFE KURUKLU OYUNCAK",
     "price": 110.0
+  },
+  {
+    "barcode": "3182550893916",
+    "name": "ROYAL CANIN DERMA COMFORT 3 KG",
+    "price": 1890.0
   },
   {
     "barcode": "8698995025003",
@@ -6033,6 +6708,31 @@
     "barcode": "30003583",
     "name": "JAKUZİ",
     "price": 1.0
+  },
+  {
+    "barcode": "8684026002990",
+    "name": "ALASKA YATAK MOR",
+    "price": 1040.0
+  },
+  {
+    "barcode": "8684026002983",
+    "name": "ALASKA YATAK KIRMIZI",
+    "price": 1040.0
+  },
+  {
+    "barcode": "8684026002976",
+    "name": "ALASKA YATAK MAVİ",
+    "price": 1040.0
+  },
+  {
+    "barcode": "8684026000200",
+    "name": "LEPUS YATAK MOR L",
+    "price": 1100.0
+  },
+  {
+    "barcode": "8684026000217",
+    "name": "LEPUS YATAK  MOR  XL",
+    "price": 1200.0
   },
   {
     "barcode": "8681451060588",
@@ -6088,6 +6788,11 @@
     "barcode": "8698995012720",
     "name": "REFLEX STICK SOMON",
     "price": 25.0
+  },
+  {
+    "barcode": "7613035114890",
+    "name": "PROPLAN SMALL MINI ADULT SOMON 3 KG",
+    "price": 1430.0
   },
   {
     "barcode": "8755142356875",
@@ -6165,6 +6870,11 @@
     "price": 850.0
   },
   {
+    "barcode": "6121000188004",
+    "name": "LINDO BOSTON NO 4",
+    "price": 1010.0
+  },
+  {
     "barcode": "6121000188008",
     "name": "LINDO BOSTON COLLEGE NO 8",
     "price": 950.0
@@ -6173,6 +6883,11 @@
     "barcode": "8005852750020",
     "name": "SCHESIR TON BALIĞI JAMBON",
     "price": 135.0
+  },
+  {
+    "barcode": "3182550768481",
+    "name": "ROYAL CANIN SATIETY WEIGHT MANAGAMENT 3.5 KG",
+    "price": 1850.0
   },
   {
     "barcode": "30003637",
@@ -6285,9 +7000,19 @@
     "price": 820.0
   },
   {
+    "barcode": "8010690184104",
+    "name": "FERPLAST BARSELLO 40 MAVİ",
+    "price": 1300.0
+  },
+  {
     "barcode": "010279904220",
     "name": "SIMPLE SOLUTION DOG REMOVER",
     "price": 345.0
+  },
+  {
+    "barcode": "8010690057552",
+    "name": "ATLAS DELUXE 10 TASIMA CANTASI",
+    "price": 1650.0
   },
   {
     "barcode": "8010690091488",
@@ -6335,9 +7060,24 @@
     "price": 250.0
   },
   {
+    "barcode": "4025877571343",
+    "name": "MERA FREAH MEAT HİNDİ 4 KG",
+    "price": 1075.0
+  },
+  {
+    "barcode": "4025877575341",
+    "name": "MERA MİNİ KUZU PİRİNÇ 4 KG",
+    "price": 2050.0
+  },
+  {
     "barcode": "8680782130519",
     "name": "DELİBON MUNCH 30 LU M",
     "price": 100.0
+  },
+  {
+    "barcode": "4025877568343",
+    "name": "MERA SOMON PİRİNÇ 4 KG",
+    "price": 1600.0
   },
   {
     "barcode": "30003729",
@@ -6400,6 +7140,16 @@
     "price": 995.0
   },
   {
+    "barcode": "8684026003249",
+    "name": "LEPUS ASTRONOT HAKİ",
+    "price": 1200.0
+  },
+  {
+    "barcode": "8684026003201",
+    "name": "LEPUS ASTRONOT ÇANTA",
+    "price": 1200.0
+  },
+  {
     "barcode": "8681451050695",
     "name": "LEPUS ŞEFFAF FLY BAG",
     "price": 685.0
@@ -6410,9 +7160,29 @@
     "price": 685.0
   },
   {
+    "barcode": "8680782133886",
+    "name": "DOGGIE SU PINARI",
+    "price": 2580.0
+  },
+  {
     "barcode": "8681451057144",
     "name": "LEPUS ŞEFFAF FLY BAG",
     "price": 685.0
+  },
+  {
+    "barcode": "8684026003171",
+    "name": "LEPUS KULÜBE YATAK MOR",
+    "price": 1300.0
+  },
+  {
+    "barcode": "8684026003188",
+    "name": "LEPUS KULÜBE YATAK KAHVERENGİ",
+    "price": 1300.0
+  },
+  {
+    "barcode": "8684026003157",
+    "name": "LEPUS KULÜBE EV MAVİ",
+    "price": 1300.0
   },
   {
     "barcode": "8681451050077",
@@ -6600,6 +7370,11 @@
     "price": 100.0
   },
   {
+    "barcode": "4355000114014",
+    "name": "LİNDO JOY NO 4",
+    "price": 1495.0
+  },
+  {
     "barcode": "8698942010649",
     "name": "TAILPETZ BOYUN TASMASI XS",
     "price": 220.0
@@ -6663,6 +7438,11 @@
     "barcode": "8680782127823",
     "name": "DOGGIE KUMAS TASMA",
     "price": 380.0
+  },
+  {
+    "barcode": "30003842",
+    "name": "ROYAL CANIN ANALERJENİC",
+    "price": 1980.0
   },
   {
     "barcode": "8850477013711",
@@ -6858,6 +7638,21 @@
     "barcode": "6111000188006",
     "name": "LİNDO ALL STAR SWEAT NO 6",
     "price": 975.0
+  },
+  {
+    "barcode": "6171000188000",
+    "name": "LİNDO AQUA YAĞMURLUK NO 0",
+    "price": 1200.0
+  },
+  {
+    "barcode": "7171000288008",
+    "name": "LİNDO AQUA BLACK NO 8",
+    "price": 2080.0
+  },
+  {
+    "barcode": "3235000135028",
+    "name": "LİNDO LUXURY DARK PLUS NO 8",
+    "price": 2090.0
   },
   {
     "barcode": "8695548975266",
@@ -7340,9 +8135,19 @@
     "price": 640.0
   },
   {
+    "barcode": "4000498032015",
+    "name": "FLEXİ NEW NEO YEŞİL S",
+    "price": 1250.0
+  },
+  {
     "barcode": "4048422110842",
     "name": "8 İN 1 STRONG DELİGHT TAVUK L",
     "price": 340.0
+  },
+  {
+    "barcode": "3182550928526",
+    "name": "ROYAL CANIN DERMA COMFORT MED 12 KG",
+    "price": 2235.0
   },
   {
     "barcode": "30004085",
@@ -7390,6 +8195,11 @@
     "price": 16.0
   },
   {
+    "barcode": "30004092",
+    "name": "RENAL KEDİ 2KG",
+    "price": 1595.0
+  },
+  {
     "barcode": "30004108",
     "name": "DİŞ İPİ",
     "price": 20.0
@@ -7403,6 +8213,11 @@
     "barcode": "8690000005277",
     "name": "PUBBER TOP",
     "price": 150.0
+  },
+  {
+    "barcode": "4355000114018",
+    "name": "LİNDO JOY YAĞMURLUK NO 8",
+    "price": 2080.0
   },
   {
     "barcode": "6927053030140",
@@ -7550,6 +8365,11 @@
     "price": 450.0
   },
   {
+    "barcode": "8010276036780",
+    "name": "N&D OCEAN ADULT PORTAKAL MORINA BALIK BUGDAY",
+    "price": 1670.0
+  },
+  {
     "barcode": "9003579008829",
     "name": "ROYAL CANIN DOG DERMACOMFORT POUNCH",
     "price": 62.5
@@ -7580,9 +8400,34 @@
     "price": 825.0
   },
   {
+    "barcode": "8010276030467",
+    "name": "N&D CAT KISIR TAVUK NAR 1.5 KG",
+    "price": 1600.0
+  },
+  {
+    "barcode": "8010276038852",
+    "name": "N&D CAT KİTTEN OCEAN KABAK KARIDES KAVUN BALIK",
+    "price": 1670.0
+  },
+  {
+    "barcode": "8010276040152",
+    "name": "N&D OCEAN KISIR MORINO BALIK PORTAKAL",
+    "price": 1670.0
+  },
+  {
+    "barcode": "8010276036629",
+    "name": "N&D OCEAN RINGA BALIK BUGDAY PORTAKAL 2.5KG",
+    "price": 1295.0
+  },
+  {
     "barcode": "8010276035813",
     "name": "N&D QUINOA RINGA BALIK QUINOA",
     "price": 695.0
+  },
+  {
+    "barcode": "5060255492130",
+    "name": "EVER CLEAN EXTRA STRONG CLUMPING 10 LT",
+    "price": 1150.0
   },
   {
     "barcode": "8682328740329",
@@ -7760,6 +8605,11 @@
     "price": 18.0
   },
   {
+    "barcode": "064992714505",
+    "name": "ACANA CAT INDOOR 1.8 KG",
+    "price": 1725.0
+  },
+  {
     "barcode": "4002064421698",
     "name": "GİMCAT RELAX PASTE",
     "price": 285.0
@@ -7823,6 +8673,11 @@
     "barcode": "8698932213012",
     "name": "TAİLPETZ AİRMASH BROWN M",
     "price": 285.0
+  },
+  {
+    "barcode": "3182550787963",
+    "name": "ROYAL CANIN CAT HEPATİC 2 KG",
+    "price": 1250.0
   },
   {
     "barcode": "30004368",
@@ -7890,6 +8745,11 @@
     "price": 200.0
   },
   {
+    "barcode": "30004412",
+    "name": "ROYAL CANIN DOG S/O",
+    "price": 1450.0
+  },
+  {
     "barcode": "8128493683264",
     "name": "PETPRETTY KEDI CIMI",
     "price": 35.0
@@ -7903,6 +8763,11 @@
     "barcode": "8699004230586",
     "name": "NATURA PLAN TAVSAN YEMI",
     "price": 65.0
+  },
+  {
+    "barcode": "5907752658266",
+    "name": "VETOSKIN",
+    "price": 1400.0
   },
   {
     "barcode": "8698931092267",
@@ -7985,9 +8850,29 @@
     "price": 170.0
   },
   {
+    "barcode": "8681999480411",
+    "name": "PETPRETTY CEKCEKLI SIRT CANTASI KIRMIZI",
+    "price": 1600.0
+  },
+  {
+    "barcode": "8681999482859",
+    "name": "PETPRETTY CEKCEKLI SIRT CANTASI",
+    "price": 1600.0
+  },
+  {
+    "barcode": "8681999483542",
+    "name": "PETPRETTY CEKCEKLI SIRT CANTASI",
+    "price": 1600.0
+  },
+  {
     "barcode": "30004443",
     "name": "TIRMALAMA 82 CM",
     "price": 280.0
+  },
+  {
+    "barcode": "30004450",
+    "name": "PETHOUSE IKI KATLI TIRMALAMA KIRMIZI",
+    "price": 1350.0
   },
   {
     "barcode": "8007520012157",
@@ -8085,6 +8970,11 @@
     "price": 320.0
   },
   {
+    "barcode": "4000498023235",
+    "name": "FLEXI NEW CLASSİC S 5M PEMBE",
+    "price": 1100.0
+  },
+  {
     "barcode": "4000498032022",
     "name": "NEW NEON PEMBE",
     "price": 640.0
@@ -8093,6 +8983,11 @@
     "barcode": "8681451002373",
     "name": "ZOOVITAL MULTIVITAMIN",
     "price": 300.0
+  },
+  {
+    "barcode": "4025877566509",
+    "name": "MERA LAMB RICE 12.5 KG",
+    "price": 3500.0
   },
   {
     "barcode": "30001213",
@@ -8395,6 +9290,11 @@
     "price": 310.0
   },
   {
+    "barcode": "30004535",
+    "name": "PEMBE KEDI EVI",
+    "price": 1000.0
+  },
+  {
     "barcode": "031658803651",
     "name": "VET'S BEST AĞIZ SPREYİ",
     "price": 170.0
@@ -8635,6 +9535,11 @@
     "price": 300.0
   },
   {
+    "barcode": "4025877574504",
+    "name": "MERA DOG BEEF PATATO 12.5 KG",
+    "price": 2450.0
+  },
+  {
     "barcode": "000000248846",
     "name": "PURELE KITIK AÇICI",
     "price": 240.0
@@ -8768,6 +9673,11 @@
     "barcode": "4000498002001",
     "name": "FLEXI SMALL MAVI 5 M SMALL",
     "price": 360.0
+  },
+  {
+    "barcode": "4000498031803",
+    "name": "FLEXI MEDIUM ORANGE 5 M",
+    "price": 1125.0
   },
   {
     "barcode": "4000498032039",
@@ -9010,9 +9920,19 @@
     "price": 250.0
   },
   {
+    "barcode": "8010276033284",
+    "name": "N&D ADULT MED MAX. KUZU BLUEBERRY KABAK 2.5 KG",
+    "price": 2160.0
+  },
+  {
     "barcode": "9003579309537",
     "name": "ROYAL CANIN DIGEST SENSITIVE POUNCH",
     "price": 62.5
+  },
+  {
+    "barcode": "30004740",
+    "name": "LV MARKA ÇANTA",
+    "price": 1500.0
   },
   {
     "barcode": "6927749811299",
@@ -9143,6 +10063,11 @@
     "barcode": "4771317456731",
     "name": "LIFESTYLE SMALL MINI ADULT KUZU 1.5 KG",
     "price": 285.0
+  },
+  {
+    "barcode": "8680782133848",
+    "name": "DOGGIE ELEKTIRIKLI TASMA",
+    "price": 2230.0
   },
   {
     "barcode": "8662214510656",
@@ -9280,6 +10205,16 @@
     "price": 150.0
   },
   {
+    "barcode": "8682689204881",
+    "name": "ZAMPA KÖPEK ARABASI",
+    "price": 3600.0
+  },
+  {
+    "barcode": "8682689204867",
+    "name": "ZAMPA KÖPEK ARABASI",
+    "price": 3600.0
+  },
+  {
     "barcode": "8698931094414",
     "name": "BIO PETACTIVE PUREPAWS",
     "price": 200.0
@@ -9343,6 +10278,11 @@
     "barcode": "5900951302183",
     "name": "WHISKAS TON BALIK POUNCH",
     "price": 33.0
+  },
+  {
+    "barcode": "4025877340451",
+    "name": "MERA STR FIT 10 KG",
+    "price": 3700.0
   },
   {
     "barcode": "30004887",
@@ -9510,6 +10450,16 @@
     "price": 190.0
   },
   {
+    "barcode": "4025877336454",
+    "name": "MERA KITTEN 10 KG",
+    "price": 2050.0
+  },
+  {
+    "barcode": "4025877385452",
+    "name": "MERA SOMON 10 KG",
+    "price": 2150.0
+  },
+  {
     "barcode": "660048170204",
     "name": "CHUCK IT ULTRA BALL 2Lİ",
     "price": 425.0
@@ -9523,6 +10473,16 @@
     "barcode": "029695319327",
     "name": "CHUCKIT AIR FETCH BALL",
     "price": 275.0
+  },
+  {
+    "barcode": "8684026004857",
+    "name": "LEPUS ASTRONOT KAHVERENGİ",
+    "price": 1200.0
+  },
+  {
+    "barcode": "8684026003218",
+    "name": "LEPUS ASTRONOT FUŞYA",
+    "price": 1200.0
   },
   {
     "barcode": "8684026001542",
@@ -9548,6 +10508,11 @@
     "barcode": "30005013",
     "name": "MAMA KABI KÖŞELİ",
     "price": 20.0
+  },
+  {
+    "barcode": "8410650167909",
+    "name": "ADVANCE STERILISED 3 KG",
+    "price": 1595.0
   },
   {
     "barcode": "8680067146310",
@@ -9648,6 +10613,11 @@
     "barcode": "3182550799638",
     "name": "ROYAL CANIN NEUTERED SATIETY BALANCA",
     "price": 595.0
+  },
+  {
+    "barcode": "3182550939478",
+    "name": "ROYAL CANIN CAT HYPOALERGENIC 2 KG",
+    "price": 2195.0
   },
   {
     "barcode": "5425007386851",
@@ -10520,6 +11490,11 @@
     "price": 600.0
   },
   {
+    "barcode": "3182550771269",
+    "name": "ROYAL CANIN GASTROINTESTINAL 4 KG",
+    "price": 1350.0
+  },
+  {
     "barcode": "6927749871545",
     "name": "WANPY TUNA BALIK HAVUC",
     "price": 80.0
@@ -10617,12 +11592,12 @@
   {
     "barcode": "5060180810030",
     "name": "ANIMOLOGY DEEP WHITE WASH 250 ML",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5065000941208",
     "name": "ANIMOLOGY DERMADOG 250 ML",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "4048422108825",
@@ -10737,7 +11712,7 @@
   {
     "barcode": "4002064400174",
     "name": "GIMCAT STICKS SOMON",
-    "price": 80.0
+    "price": 85.0
   },
   {
     "barcode": "30005341",
@@ -11065,6 +12040,11 @@
     "price": 20.0
   },
   {
+    "barcode": "30005488",
+    "name": "ŞENYAYLA TUVALET BUYUK BOY",
+    "price": 1135.0
+  },
+  {
     "barcode": "30005495",
     "name": "ÇANTA BÜYÜK",
     "price": 800.0
@@ -11295,6 +12275,11 @@
     "price": 330.0
   },
   {
+    "barcode": "029695330285",
+    "name": "CHUCK IT RUGGED BUMPER",
+    "price": 1400.0
+  },
+  {
     "barcode": "029695321399",
     "name": "CHUCK IT ULTRA RING KOPEK HALKA OYUNCAK",
     "price": 400.0
@@ -11330,9 +12315,29 @@
     "price": 720.0
   },
   {
+    "barcode": "30005600",
+    "name": "ROYAL CANIN MED. PUPPY 15 KG",
+    "price": 5250.0
+  },
+  {
     "barcode": "30005617",
     "name": "ŞAPKA",
     "price": 120.0
+  },
+  {
+    "barcode": "3182550711050",
+    "name": "ROYAL CANIN 3.5 KG URİNARY S/O",
+    "price": 2250.0
+  },
+  {
+    "barcode": "3182550784580",
+    "name": "ROYAL CANIN STERILISED +7 3.5 KG",
+    "price": 1055.0
+  },
+  {
+    "barcode": "8681999484839",
+    "name": "PETPRETTY TEKERLEKLİ ÇANTA MAVİ",
+    "price": 2050.0
   },
   {
     "barcode": "8697524086799",
@@ -11445,9 +12450,44 @@
     "price": 180.0
   },
   {
+    "barcode": "6121000188007",
+    "name": "LİNDO BOSTON NO 7",
+    "price": 1080.0
+  },
+  {
     "barcode": "6111000188000",
     "name": "COLLEGE ALL STAR NO 0",
     "price": 785.0
+  },
+  {
+    "barcode": "6342000112028",
+    "name": "LİNDO COSMO PLUS NO 8",
+    "price": 2080.0
+  },
+  {
+    "barcode": "6342000112027",
+    "name": "LİNDO COSMO PLUS NO 7",
+    "price": 1640.0
+  },
+  {
+    "barcode": "6171000188006",
+    "name": "LİNDO AQUA YAĞMURLUK NO 6",
+    "price": 1550.0
+  },
+  {
+    "barcode": "7171000288006",
+    "name": "LİNDO AQUA BLACK NO 6",
+    "price": 1550.0
+  },
+  {
+    "barcode": "4355000114010",
+    "name": "LİNDO JOY YAĞMURLUK NO 0",
+    "price": 1410.0
+  },
+  {
+    "barcode": "4355000114016",
+    "name": "LİNDO JOY YAĞMURLUK NO 6",
+    "price": 1325.0
   },
   {
     "barcode": "8697524085549",
@@ -11570,9 +12610,24 @@
     "price": 945.0
   },
   {
+    "barcode": "4000498031704",
+    "name": "FLEXI NEW NEON M 5 M",
+    "price": 1480.0
+  },
+  {
+    "barcode": "4000498032114",
+    "name": "FLEXI NEW NEON MAVI M 5M",
+    "price": 1480.0
+  },
+  {
     "barcode": "4000498032107",
     "name": "FLEXI NEW NEON PEMBE M 5M",
     "price": 975.0
+  },
+  {
+    "barcode": "4000498031902",
+    "name": "FLEXI NEW NEON M 5M",
+    "price": 1480.0
   },
   {
     "barcode": "4000498022603",
@@ -11593,6 +12648,21 @@
     "barcode": "4000498032411",
     "name": "FLEXI STYLE 3M S PEMBE",
     "price": 950.0
+  },
+  {
+    "barcode": "4000498032428",
+    "name": "FLEXI STYLE 3M S TURKUAZ",
+    "price": 1150.0
+  },
+  {
+    "barcode": "4000498032404",
+    "name": "FLEXI STYLE 3M S GRİ",
+    "price": 1150.0
+  },
+  {
+    "barcode": "4000498015568",
+    "name": "FLEXI GIANT L 8M",
+    "price": 2650.0
   },
   {
     "barcode": "30005778",
@@ -11667,7 +12737,7 @@
   {
     "barcode": "5060180816858",
     "name": "ANIMOLOGY SPA DAY",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "5060180812188",
@@ -11685,6 +12755,11 @@
     "price": 850.0
   },
   {
+    "barcode": "700603673327",
+    "name": "NINA OTTOSSON DOG TORNADO",
+    "price": 1100.0
+  },
+  {
     "barcode": "30005785",
     "name": "ÇATI PATİ YATAK NO 3",
     "price": 400.0
@@ -11695,9 +12770,19 @@
     "price": 160.0
   },
   {
+    "barcode": "30005792",
+    "name": "ROYAL CANIN GASTRO 15 KG",
+    "price": 3900.0
+  },
+  {
     "barcode": "30005808",
     "name": "NINA OTTOSSON KEDI ODUL MAMALI OYUNCAK",
     "price": 831.0
+  },
+  {
+    "barcode": "30005815",
+    "name": "NINO OTTOSSON ZEKA OYUNCAGI",
+    "price": 1100.0
   },
   {
     "barcode": "8662214512742",
@@ -12485,9 +13570,14 @@
     "price": 270.0
   },
   {
-    "barcode": "744369288173",
-    "name": "UNIPETS OLTA",
-    "price": 60.0
+    "barcode": "30006003",
+    "name": "KOLTUK YATAK",
+    "price": 1900.0
+  },
+  {
+    "barcode": "30006010",
+    "name": "KOLTUK YATAK KADİFE",
+    "price": 2100.0
   },
   {
     "barcode": "744369288166",
@@ -12498,6 +13588,11 @@
     "barcode": "744369288111",
     "name": "UNIPETS OLTA",
     "price": 50.0
+  },
+  {
+    "barcode": "30004122",
+    "name": "HOROZ KÜÇÜK",
+    "price": 65.0
   },
   {
     "barcode": "744369288128",
@@ -12660,6 +13755,11 @@
     "price": 190.0
   },
   {
+    "barcode": "4007221042341",
+    "name": "SERESTO PİRE TASMASI",
+    "price": 1850.0
+  },
+  {
     "barcode": "4007221042372",
     "name": "BAYER ADVANTAGE DIŞ PARAZİT",
     "price": 400.0
@@ -12708,6 +13808,56 @@
     "barcode": "8683659501689",
     "name": "MOR LAMA YANDAN ÇANTA MOR",
     "price": 700.0
+  },
+  {
+    "barcode": "4025877389306",
+    "name": "MERA SENIOR BEEF 2 KG",
+    "price": 1300.0
+  },
+  {
+    "barcode": "799588600343",
+    "name": "SALYA YAĞMURLUK PEMBE S",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600350",
+    "name": "SALYA YAĞMURLUK PEMBE M",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600367",
+    "name": "SALYA YAĞMURLUK PEMBE L",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600374",
+    "name": "SALYA YAĞMURLUK PEMBE XL",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600381",
+    "name": "SALYA YAĞMURLUK PEMBE XXL",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600541",
+    "name": "SALYA YAĞMURLUK KİREMİT S",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600558",
+    "name": "SALYA YAĞMURLUK KİREMİT M",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600565",
+    "name": "SALYA YAĞMURLUK KİREMİT L",
+    "price": 1000.0
+  },
+  {
+    "barcode": "799588600572",
+    "name": "SALYA YAĞMURLUK KİREMİT XL",
+    "price": 1000.0
   },
   {
     "barcode": "799588600589",
@@ -12808,6 +13958,16 @@
     "barcode": "799588600275",
     "name": "SALYA BROKLIYN  BORDO XXL",
     "price": 480.0
+  },
+  {
+    "barcode": "799588600947",
+    "name": "SALYA STORE MIGHT MONT XXL",
+    "price": 1100.0
+  },
+  {
+    "barcode": "799588600916",
+    "name": "SALYA STORE MIGHT MONT M",
+    "price": 1100.0
   },
   {
     "barcode": "799588600923",
@@ -13020,6 +14180,16 @@
     "price": 520.0
   },
   {
+    "barcode": "8682250519239",
+    "name": "DUBEX XXL YATAK HAKİ YEŞİL",
+    "price": 1200.0
+  },
+  {
+    "barcode": "8682250513749",
+    "name": "DUBEX XXL MAVİ",
+    "price": 1200.0
+  },
+  {
     "barcode": "8712695113270",
     "name": "EASTLAND ÖTEN PELUŞ",
     "price": 200.0
@@ -13067,7 +14237,7 @@
   {
     "barcode": "30006072",
     "name": "GARDEN MIX 5 LT",
-    "price": 110.0
+    "price": 120.0
   },
   {
     "barcode": "4002064407524",
@@ -13235,6 +14405,11 @@
     "price": 690.0
   },
   {
+    "barcode": "700603693448",
+    "name": "NINA OTTOSSON WOBBLE BOWL",
+    "price": 1270.0
+  },
+  {
     "barcode": "30006096",
     "name": "SİMLi MAMA KABI",
     "price": 35.0
@@ -13290,6 +14465,16 @@
     "price": 480.0
   },
   {
+    "barcode": "30006102",
+    "name": "ÇANTA LÜX",
+    "price": 1000.0
+  },
+  {
+    "barcode": "4025877569500",
+    "name": "MERA JUNIOR 12,5 KG",
+    "price": 2600.0
+  },
+  {
     "barcode": "4002064420769",
     "name": "GIMCAT ÖDÜL MAMASI CHICKEN",
     "price": 60.0
@@ -13335,6 +14520,11 @@
     "price": 25.0
   },
   {
+    "barcode": "30006126",
+    "name": "JUMBO AÇIK ÇEKMELİ KEDİ TUVALETİ",
+    "price": 1400.0
+  },
+  {
     "barcode": "30006133",
     "name": "PETBİTE AÇIK 1 KG",
     "price": 85.0
@@ -13353,6 +14543,16 @@
     "barcode": "8698995030212",
     "name": "REFLEX STICK TAVUK ÖRDEK",
     "price": 45.0
+  },
+  {
+    "barcode": "3182550771054",
+    "name": "ROYAL CANIN DOG GASTRO 2 KG",
+    "price": 1350.0
+  },
+  {
+    "barcode": "8682250516108",
+    "name": "DUBEX TIRMALAMA YUVALI",
+    "price": 1700.0
   },
   {
     "barcode": "8683604135020",
@@ -13395,6 +14595,11 @@
     "price": 275.0
   },
   {
+    "barcode": "8682250515484",
+    "name": "DUBEX TIRMALAMA YUVALI",
+    "price": 1350.0
+  },
+  {
     "barcode": "8682315521023",
     "name": "NATURA TON BALIĞI SARDALYA",
     "price": 70.0
@@ -13435,9 +14640,19 @@
     "price": 450.0
   },
   {
+    "barcode": "8682250515491",
+    "name": "DUBEX TIRMALAMA BEYAZ YUVALI",
+    "price": 1350.0
+  },
+  {
     "barcode": "30006218",
     "name": "THXO TARAK",
     "price": 800.0
+  },
+  {
+    "barcode": "30006225",
+    "name": "JUMBO KAPALI TUVALET",
+    "price": 1250.0
   },
   {
     "barcode": "8695548979011",
@@ -13485,14 +14700,34 @@
     "price": 130.0
   },
   {
+    "barcode": "799588600909",
+    "name": "SALYA MIDNIGHT MONT S",
+    "price": 1100.0
+  },
+  {
+    "barcode": "799588600992",
+    "name": "SALYA MIDNIGHT HAKİ MONT",
+    "price": 1100.0
+  },
+  {
     "barcode": "799588600985",
     "name": "SALYA FOREST MONT XL",
     "price": 850.0
   },
   {
+    "barcode": "799588600954",
+    "name": "SALYA FOREST MONT S",
+    "price": 1100.0
+  },
+  {
     "barcode": "799588600961",
     "name": "SALYA FOREST MONT M",
     "price": 800.0
+  },
+  {
+    "barcode": "799588600978",
+    "name": "SALYA FOREST MONT L",
+    "price": 1100.0
   },
   {
     "barcode": "799588600848",
@@ -13523,6 +14758,11 @@
     "barcode": "799588600893",
     "name": "SALYA INTENSE RED MONT",
     "price": 850.0
+  },
+  {
+    "barcode": "799588600886",
+    "name": "SALYA INTENSE RED MONT XL",
+    "price": 1100.0
   },
   {
     "barcode": "799588600855",
@@ -13558,6 +14798,76 @@
     "barcode": "30006249",
     "name": "PROPLAN MED ADULT SOMON 1 KG",
     "price": 350.0
+  },
+  {
+    "barcode": "30006256",
+    "name": "PROPLAN MED PUPY 12 KG",
+    "price": 4900.0
+  },
+  {
+    "barcode": "8684438700040",
+    "name": "LINDO AIR PUFF DEEP NO 5",
+    "price": 1560.0
+  },
+  {
+    "barcode": "8684438700033",
+    "name": "LINDO AIR OUFF DEEP NO 4",
+    "price": 1485.0
+  },
+  {
+    "barcode": "8684438700064",
+    "name": "LINDO AIR OUFF DEEP NO 7",
+    "price": 1950.0
+  },
+  {
+    "barcode": "8684438702303",
+    "name": "LINDO AIR GREEN APPLE NO 5",
+    "price": 1860.0
+  },
+  {
+    "barcode": "8684438702297",
+    "name": "LİNDO AİR PUFF GREEN NO 4",
+    "price": 1770.0
+  },
+  {
+    "barcode": "8684438702280",
+    "name": "LİNDO AİR PUFF GREEN NO 3",
+    "price": 1770.0
+  },
+  {
+    "barcode": "8684438702273",
+    "name": "LİNDO AİR PUFF GREEN NO 2",
+    "price": 1410.0
+  },
+  {
+    "barcode": "8684438702266",
+    "name": "LİNDO AİR PUFF GREEN NO 1",
+    "price": 1100.0
+  },
+  {
+    "barcode": "8684438700057",
+    "name": "LİNDO AIR PUFF DEEP NO 6",
+    "price": 1730.0
+  },
+  {
+    "barcode": "8684438700118",
+    "name": "LİNDO AİUR PUFF MANGO NO 4",
+    "price": 1490.0
+  },
+  {
+    "barcode": "8684438700125",
+    "name": "LİNDO AİUR PUFF MANGO NO 5",
+    "price": 1560.0
+  },
+  {
+    "barcode": "8684438700149",
+    "name": "LİNDO AİUR PUFF MANGO NO 7",
+    "price": 1950.0
+  },
+  {
+    "barcode": "7171000288000",
+    "name": "AQUA BLACK YAĞMURLUK NO 0",
+    "price": 1670.0
   },
   {
     "barcode": "8712695508755",
@@ -13635,6 +14945,11 @@
     "price": 65.0
   },
   {
+    "barcode": "052742059532",
+    "name": "HILLS STERILISED TAVUK 1.5 KG",
+    "price": 1350.0
+  },
+  {
     "barcode": "052742003764",
     "name": "HILLS URINARY 1.5 KG",
     "price": 910.0
@@ -13643,6 +14958,11 @@
     "barcode": "052742054711",
     "name": "HILLS CULINARY 1.5 KG SOMON HAVUC",
     "price": 800.0
+  },
+  {
+    "barcode": "052742059471",
+    "name": "HILLS SMALL MINI KUZU 1.5 KG",
+    "price": 1280.0
   },
   {
     "barcode": "052742060903",
@@ -13670,6 +14990,16 @@
     "price": 30.0
   },
   {
+    "barcode": "052742059631",
+    "name": "HILLS KITTEN TAVUK 1.5 KG",
+    "price": 1200.0
+  },
+  {
+    "barcode": "30006287",
+    "name": "OTTO ZEKA OYUNCAK",
+    "price": 1270.0
+  },
+  {
     "barcode": "30006294",
     "name": "PROPLAN PUPPY 1 KG",
     "price": 320.0
@@ -13678,6 +15008,11 @@
     "barcode": "8712695509639",
     "name": "EASTLAND KALPLİ OLTA",
     "price": 80.0
+  },
+  {
+    "barcode": "4025877382451",
+    "name": "MERA KITTEN 10 KG",
+    "price": 3200.0
   },
   {
     "barcode": "30006300",
@@ -13763,6 +15098,26 @@
     "barcode": "30006362",
     "name": "SALYA SİYAH ÇANTA",
     "price": 700.0
+  },
+  {
+    "barcode": "8596075001513",
+    "name": "KIWI WALKER MAMA KABI",
+    "price": 1350.0
+  },
+  {
+    "barcode": "8596075001537",
+    "name": "KIWI WALKER MAMA KABI",
+    "price": 1350.0
+  },
+  {
+    "barcode": "8596075001520",
+    "name": "KIWI WALKER MAMA KABI",
+    "price": 1350.0
+  },
+  {
+    "barcode": "8596075001506",
+    "name": "KIWI WALKER MAMA KABI",
+    "price": 1350.0
   },
   {
     "barcode": "8596075002442",
@@ -14340,6 +15695,26 @@
     "price": 200.0
   },
   {
+    "barcode": "4025877566349",
+    "name": "MERA BUYUK IRK KUZULU YETISKIN 4 KG",
+    "price": 2050.0
+  },
+  {
+    "barcode": "8682689204959",
+    "name": "ZAMPA KÖPEK ARABASI SİYAH 45X64X96 CM",
+    "price": 5500.0
+  },
+  {
+    "barcode": "8682689204973",
+    "name": "ZAMPA FAVORITE KÖPEK ARABASI 46X78X99",
+    "price": 5500.0
+  },
+  {
+    "barcode": "8682689204720",
+    "name": "ZAMPA FAVORITE KÖPEK ARABASI 42X69.5X88",
+    "price": 5000.0
+  },
+  {
     "barcode": "30006430",
     "name": "MİLANO OMUZ ÇANTA",
     "price": 450.0
@@ -14460,6 +15835,26 @@
     "price": 530.0
   },
   {
+    "barcode": "30006461",
+    "name": "SALYA PEMBE MAGNET INSAN L",
+    "price": 1100.0
+  },
+  {
+    "barcode": "052742023724",
+    "name": "HILLS TUNA BALIK 1.5 KG",
+    "price": 1150.0
+  },
+  {
+    "barcode": "8684438702310",
+    "name": "LİNDO AIR PUFF APPLE NO 6",
+    "price": 1730.0
+  },
+  {
+    "barcode": "8684438700132",
+    "name": "LİNDO AIR PUFF MANGO NO 6",
+    "price": 1950.0
+  },
+  {
     "barcode": "8690632660097",
     "name": "GOURMET TAVUK 6 AL 5 ÖDE",
     "price": 140.0
@@ -14535,6 +15930,11 @@
     "price": 450.0
   },
   {
+    "barcode": "30006508",
+    "name": "ROYAL CANIN WEIGHT MANAGEMENT 6 KG",
+    "price": 1700.0
+  },
+  {
     "barcode": "30006515",
     "name": "UCK PED 10LU",
     "price": 60.0
@@ -14548,6 +15948,11 @@
     "barcode": "4017721827287",
     "name": "ANIMONDA GRANCARNO SIGIR HINDI 400 G",
     "price": 145.0
+  },
+  {
+    "barcode": "052742059556",
+    "name": "HILLS STRL TUNA BALIK 1.5 KG",
+    "price": 1350.0
   },
   {
     "barcode": "9003579001257",
@@ -14715,6 +16120,36 @@
     "price": 550.0
   },
   {
+    "barcode": "8684026006738",
+    "name": "LEPUS COOL BACKPACK ÇANTA GRI",
+    "price": 1000.0
+  },
+  {
+    "barcode": "8684026006721",
+    "name": "LEPUS COOL BACKPACK ÇANTA KIRMIZI",
+    "price": 1000.0
+  },
+  {
+    "barcode": "8684026006714",
+    "name": "LEPUS COOL BACKPACK ÇANTA MAVİ",
+    "price": 1000.0
+  },
+  {
+    "barcode": "8684026006707",
+    "name": "LEPUS COOL BACKPACK ÇANTA SİYAH",
+    "price": 1000.0
+  },
+  {
+    "barcode": "8684026004642",
+    "name": "LEPUS SLING BAG MOR",
+    "price": 1000.0
+  },
+  {
+    "barcode": "8684026004673",
+    "name": "LEPUS SLING BAG TOZ PEMBE",
+    "price": 1000.0
+  },
+  {
     "barcode": "8681451065934",
     "name": "LEPUS MINI BEED",
     "price": 200.0
@@ -14765,6 +16200,11 @@
     "price": 18.0
   },
   {
+    "barcode": "30006577",
+    "name": "MAMA KABI OTOMATIK",
+    "price": 3000.0
+  },
+  {
     "barcode": "8684259004976",
     "name": "PET BRUSH TARAK S",
     "price": 350.0
@@ -14813,6 +16253,11 @@
     "barcode": "30006638",
     "name": "YAKALIK",
     "price": 200.0
+  },
+  {
+    "barcode": "30006645",
+    "name": "ARABA KOLTUK",
+    "price": 1300.0
   },
   {
     "barcode": "8411514806453",
@@ -14932,7 +16377,7 @@
   {
     "barcode": "5060180816827",
     "name": "ANIMOLOGY PUPPY POWDER",
-    "price": 635.0
+    "price": 690.0
   },
   {
     "barcode": "8681085428457",
@@ -15055,6 +16500,11 @@
     "price": 115.0
   },
   {
+    "barcode": "3182550402170",
+    "name": "ROYAL CANIN MINI ADULT 2 KG",
+    "price": 1050.0
+  },
+  {
     "barcode": "8682315521108",
     "name": "NATURA TAVUK FILETO PEYNIR 70G",
     "price": 70.0
@@ -15125,6 +16575,11 @@
     "price": 35.0
   },
   {
+    "barcode": "30006737",
+    "name": "ROYAL CANIN SATAYT WEIHGT MANAGEMENT 12 KG",
+    "price": 3000.0
+  },
+  {
     "barcode": "8697460315014",
     "name": "GOODY TAVUKLU 400 G",
     "price": 35.0
@@ -15153,6 +16608,16 @@
     "barcode": "30006775",
     "name": "MERA 0,5 KG",
     "price": 197.5
+  },
+  {
+    "barcode": "4025877566547",
+    "name": "MERA KUZU 12.5 KG",
+    "price": 3500.0
+  },
+  {
+    "barcode": "30006782",
+    "name": "LV ORJIN ÇANYA",
+    "price": 4000.0
   },
   {
     "barcode": "30006799",
@@ -15200,6 +16665,11 @@
     "price": 70.0
   },
   {
+    "barcode": "4025877384301",
+    "name": "MERA ALL CATS TAVUK 2 KG",
+    "price": 1300.0
+  },
+  {
     "barcode": "5678902023579",
     "name": "ŞARJLI TOP",
     "price": 350.0
@@ -15208,6 +16678,11 @@
     "barcode": "30006829",
     "name": "ROYAL CANIN URINARY POUNCH",
     "price": 74.5
+  },
+  {
+    "barcode": "4007221042358",
+    "name": "SERESTO BUYUK KOPEK",
+    "price": 1950.0
   },
   {
     "barcode": "8680114761244",
@@ -15235,6 +16710,11 @@
     "price": 60.0
   },
   {
+    "barcode": "30000322",
+    "name": "MISS DAISY BUYUK IRK MONT",
+    "price": 1050.0
+  },
+  {
     "barcode": "30000339",
     "name": "hound top",
     "price": 400.0
@@ -15247,7 +16727,7 @@
   {
     "barcode": "8005852172716",
     "name": "SCHESIR  TON BALIK KALAMAR",
-    "price": 120.0
+    "price": 135.0
   },
   {
     "barcode": "8005852613530",
@@ -15443,6 +16923,16 @@
     "barcode": "8681085428884",
     "name": "GARDEN MIX SOMON ET ODUl 75 G",
     "price": 130.0
+  },
+  {
+    "barcode": "8681085427368",
+    "name": "MAKAS",
+    "price": 2000.0
+  },
+  {
+    "barcode": "30000407",
+    "name": "tarakmusterı",
+    "price": 1000.0
   },
   {
     "barcode": "8005852712523",
@@ -15718,6 +17208,21 @@
     "barcode": "8683930600353",
     "name": "KEYDOG KUZU ISKEMBE",
     "price": 150.0
+  },
+  {
+    "barcode": "7613036529181",
+    "name": "PROPLAN ELEGANT SOMON 3 KG",
+    "price": 1200.0
+  },
+  {
+    "barcode": "7613036508247",
+    "name": "PRO PLAN SOMON VITAL 3 KG",
+    "price": 1200.0
+  },
+  {
+    "barcode": "7613035846708",
+    "name": "PRO PLAN KEDI KUZU ETLI 3 KG",
+    "price": 1615.0
   },
   {
     "barcode": "799588603498",
@@ -16080,6 +17585,11 @@
     "price": 60.0
   },
   {
+    "barcode": "8680782133831",
+    "name": "DOGGIE TITRESIMLI TASMA",
+    "price": 2230.0
+  },
+  {
     "barcode": "8680782131646",
     "name": "EFFECTIVE MALT 100 G",
     "price": 200.0
@@ -16170,6 +17680,16 @@
     "price": 62.0
   },
   {
+    "barcode": "3182550805186",
+    "name": "ROYAL CANIN KITTEN STRL 1.5 KG",
+    "price": 1350.0
+  },
+  {
+    "barcode": "3182550894128",
+    "name": "ROYAL CANIN STL DOG 3 KG",
+    "price": 1890.0
+  },
+  {
     "barcode": "9003579311660",
     "name": "ROYAL CANIN MOTHER AND BABY 195 G",
     "price": 170.0
@@ -16200,9 +17720,29 @@
     "price": 435.0
   },
   {
+    "barcode": "30000698",
+    "name": "OUTWARD CAN YELEĞİ XS",
+    "price": 1650.0
+  },
+  {
+    "barcode": "30000704",
+    "name": "OUTWARD CAN YELEĞİ",
+    "price": 1800.0
+  },
+  {
+    "barcode": "30000711",
+    "name": "OURWARD CAN YELEĞİ M",
+    "price": 1700.0
+  },
+  {
     "barcode": "5060180819460",
     "name": "ANIMOLOGY TÜY VITAMINI",
     "price": 690.0
+  },
+  {
+    "barcode": "8010276041135",
+    "name": "N&D SUPRINIA RINGA BALIK UZUM",
+    "price": 1500.0
   },
   {
     "barcode": "8712695508854",
@@ -16330,6 +17870,21 @@
     "price": 190.0
   },
   {
+    "barcode": "8010276036704",
+    "name": "ND OCEAN RİNGA BALIKLI PORTAKALLI",
+    "price": 1670.0
+  },
+  {
+    "barcode": "30000780",
+    "name": "HESPERUS  M l XL GEZDIRME",
+    "price": 1950.0
+  },
+  {
+    "barcode": "30000797",
+    "name": "HESPERUS XS S",
+    "price": 1850.0
+  },
+  {
     "barcode": "8698995033879",
     "name": "REFLEX SOMON STICK",
     "price": 45.0
@@ -16378,6 +17933,11 @@
     "barcode": "8683105680913",
     "name": "MINNOŞ BEYAZ SABUN KOKU GIDERICI",
     "price": 15.0
+  },
+  {
+    "barcode": "8682689204706",
+    "name": "ZAMPA BEBEK ARABASI 42X69.5X88",
+    "price": 5500.0
   },
   {
     "barcode": "8606014102383",
@@ -16433,6 +17993,11 @@
     "barcode": "30000513",
     "name": "SALYA STORE YAZLIK  ÇANTA",
     "price": 850.0
+  },
+  {
+    "barcode": "8033776766827",
+    "name": "PETGARDEN TAŞIMA 55.54.36.37 CM",
+    "price": 1600.0
   },
   {
     "barcode": "8712695554332",
@@ -16498,6 +18063,21 @@
     "barcode": "8699707650704",
     "name": "BAFFILING KALAMAR KEMIGI",
     "price": 35.0
+  },
+  {
+    "barcode": "30000858",
+    "name": "PETGARDEN BEBEK ARABASI GRI",
+    "price": 4700.0
+  },
+  {
+    "barcode": "30000865",
+    "name": "PETGARDEN BEBEK ARABASI SIYAH",
+    "price": 4300.0
+  },
+  {
+    "barcode": "30000872",
+    "name": "PETGARDEN BEBEK ARABASI SIYAH 82x46x97",
+    "price": 4800.0
   },
   {
     "barcode": "30000889",
@@ -16903,6 +18483,11 @@
     "barcode": "30000988",
     "name": "MORLAMA BUYUK IRK YAGMURLUk",
     "price": 720.0
+  },
+  {
+    "barcode": "30000995",
+    "name": "MOR LAMA TULUM YAGMURLUK",
+    "price": 1020.0
   },
   {
     "barcode": "8681299608195",
@@ -17400,6 +18985,11 @@
     "price": 27.0
   },
   {
+    "barcode": "8010276030481",
+    "name": "N&D TAHILLI TAVUK NAR KISIR 1.5 KG",
+    "price": 1435.0
+  },
+  {
     "barcode": "8680589181448",
     "name": "SUPRAVET IMMUNE C VIT",
     "price": 330.0
@@ -17523,6 +19113,16 @@
     "barcode": "30001282",
     "name": "PEMBE PATİ DESEN MAMA KABI",
     "price": 220.0
+  },
+  {
+    "barcode": "30001299",
+    "name": "MORLAMA YATAK",
+    "price": 1100.0
+  },
+  {
+    "barcode": "30001305",
+    "name": "MORLAMA NO 2",
+    "price": 1200.0
   },
   {
     "barcode": "30001312",
@@ -17778,6 +19378,21 @@
     "barcode": "8005852750068",
     "name": "SCHESIR TON BALIĞI VE SURUMI",
     "price": 135.0
+  },
+  {
+    "barcode": "052742025223",
+    "name": "HILLS BUYUK IRK YETISKIN KUZU 2.5 KG",
+    "price": 1435.0
+  },
+  {
+    "barcode": "052742048871",
+    "name": "HILLS PUPPY MINI 1.5 KG",
+    "price": 1120.0
+  },
+  {
+    "barcode": "30001428",
+    "name": "MARKA TASMA",
+    "price": 2200.0
   },
   {
     "barcode": "8699184028102",
@@ -18145,6 +19760,11 @@
     "price": 860.0
   },
   {
+    "barcode": "30001435",
+    "name": "XPET YATAK",
+    "price": 1300.0
+  },
+  {
     "barcode": "8680782133275",
     "name": "CATTIE LITTER MAT",
     "price": 310.0
@@ -18340,6 +19960,11 @@
     "price": 55.0
   },
   {
+    "barcode": "30001541",
+    "name": "GUCCI LV MONT",
+    "price": 1300.0
+  },
+  {
     "barcode": "5410340216200",
     "name": "VERSELEGA MUHABBET 1 KG",
     "price": 240.0
@@ -18388,6 +20013,11 @@
     "barcode": "30001633",
     "name": "INCE NOEL KIYAFET",
     "price": 250.0
+  },
+  {
+    "barcode": "8010276021571",
+    "name": "N&D TAVUK NAR BUGDAG 1.5 KG",
+    "price": 1360.0
   },
   {
     "barcode": "8690536905614",
@@ -18458,6 +20088,11 @@
     "barcode": "30001756",
     "name": "LAVITAL ACIK 1 KG",
     "price": 180.0
+  },
+  {
+    "barcode": "30001763",
+    "name": "KEDI TIRMALAMA EVLI",
+    "price": 1360.0
   },
   {
     "barcode": "8682315521313",
@@ -18555,6 +20190,21 @@
     "price": 60.0
   },
   {
+    "barcode": "8684564700020",
+    "name": "SIESTE YATAK 65x55 CM",
+    "price": 1275.0
+  },
+  {
+    "barcode": "30001824",
+    "name": "MARKA YATAK",
+    "price": 3600.0
+  },
+  {
+    "barcode": "30001831",
+    "name": "LV YATAK",
+    "price": 3200.0
+  },
+  {
     "barcode": "30001855",
     "name": "PASPAS RENKLI",
     "price": 110.0
@@ -18583,6 +20233,16 @@
     "barcode": "8680782133893",
     "name": "FILTRE",
     "price": 780.0
+  },
+  {
+    "barcode": "3182550717144",
+    "name": "ROYAL CANIN EXIGIENT CAT 4 KG",
+    "price": 1790.0
+  },
+  {
+    "barcode": "7613035120389",
+    "name": "Pro Plan Sensitive Skin Somonlu Medium Puppy Orta",
+    "price": 3925.0
   },
   {
     "barcode": "8698995032858",
@@ -18685,6 +20345,31 @@
     "price": 825.0
   },
   {
+    "barcode": "8683642006566",
+    "name": "PAWSTAR BUYUK IRK MONT YESIL",
+    "price": 1275.0
+  },
+  {
+    "barcode": "8683642006573",
+    "name": "PAWSTAR BUYUK IRK MONT YESIL",
+    "price": 1275.0
+  },
+  {
+    "barcode": "8683642006580",
+    "name": "PAWSTAR BUYUK IRK MONT YESIL",
+    "price": 1275.0
+  },
+  {
+    "barcode": "8683642006597",
+    "name": "PAWSTAR BUYUK IRK MONT YESIL",
+    "price": 1275.0
+  },
+  {
+    "barcode": "8683642006603",
+    "name": "PAWSTAR BUYUK IRK MONT YESIL",
+    "price": 1275.0
+  },
+  {
     "barcode": "30001916",
     "name": "ROYALIST KALIN ZINCIR",
     "price": 385.0
@@ -18710,6 +20395,11 @@
     "price": 200.0
   },
   {
+    "barcode": "064992183127",
+    "name": "ORIJEN SIX FISH 114 KG",
+    "price": 7420.0
+  },
+  {
     "barcode": "30001992",
     "name": "POLAR GRI SWEAT",
     "price": 320.0
@@ -18720,6 +20410,11 @@
     "price": 290.0
   },
   {
+    "barcode": "052742025391",
+    "name": "HILLS MINI ADULT KUZU 6 KG",
+    "price": 2815.0
+  },
+  {
     "barcode": "8681299031115",
     "name": "JUNGLE SIĞIR ET 85 G",
     "price": 20.0
@@ -18728,6 +20423,21 @@
     "barcode": "5410340218808",
     "name": "VERSELEGA KUCUK PAPAĞAN",
     "price": 250.0
+  },
+  {
+    "barcode": "8410650215150",
+    "name": "ADVANCE MINI SOMON 3 KG",
+    "price": 1459.0
+  },
+  {
+    "barcode": "8410650235448",
+    "name": "ADVANCE BUYUK IRK KUZULU 3 KG",
+    "price": 1405.0
+  },
+  {
+    "barcode": "30002043",
+    "name": "PETKIT PRMAX 2",
+    "price": 27200.0
   },
   {
     "barcode": "30002050",
@@ -18763,6 +20473,11 @@
     "barcode": "8859710205692",
     "name": "MOOCHIE SOMON CORBA 135 ML",
     "price": 70.0
+  },
+  {
+    "barcode": "30002081",
+    "name": "KUTULU ÇİT 75x69",
+    "price": 1100.0
   },
   {
     "barcode": "30002104",
@@ -19300,6 +21015,11 @@
     "price": 350.0
   },
   {
+    "barcode": "30002401",
+    "name": "LV GUCCI PRADA BURBERRY TASMA",
+    "price": 2200.0
+  },
+  {
     "barcode": "8680000639305",
     "name": "PETPRETTY YATAK NO 1",
     "price": 400.0
@@ -19365,6 +21085,11 @@
     "price": 250.0
   },
   {
+    "barcode": "052742071527",
+    "name": "HILL'S STR SOMON 1.5 KG",
+    "price": 1350.0
+  },
+  {
     "barcode": "8699310420046",
     "name": "NUTRI TON BALIK TAVUK CİĞER 85 G",
     "price": 70.0
@@ -19378,6 +21103,11 @@
     "barcode": "8859710205678",
     "name": "MOOCHUE BEEF ÇORBA",
     "price": 80.0
+  },
+  {
+    "barcode": "30002562",
+    "name": "PURAMAX2 OTOMATIC WC",
+    "price": 27250.0
   },
   {
     "barcode": "8682315526998",
@@ -19428,6 +21158,11 @@
     "barcode": "6925394800057",
     "name": "SEBO IC FILTRE WP 3200",
     "price": 700.0
+  },
+  {
+    "barcode": "30002609",
+    "name": "GASTRO KÖPEK 7.5",
+    "price": 2800.0
   },
   {
     "barcode": "8680782134456",
@@ -19585,6 +21320,31 @@
     "price": 65.0
   },
   {
+    "barcode": "8410650150130",
+    "name": "ADVANCE PUPPY MINI TAVUKLU 3 KG",
+    "price": 1205.0
+  },
+  {
+    "barcode": "8410650150710",
+    "name": "ADVANCE MED MAX SOMON 3 KG",
+    "price": 1470.0
+  },
+  {
+    "barcode": "8410650150352",
+    "name": "ADVANCE MED MAX ADULT TAVUK 3 KG",
+    "price": 1205.0
+  },
+  {
+    "barcode": "8010276021595",
+    "name": "N&D TAHILLI KUZU YABAN MERSINI BUGDAY  1.5 KG",
+    "price": 1360.0
+  },
+  {
+    "barcode": "8010276036643",
+    "name": "N&D TAHILSIZ KUZU YABAN MERSINI MED. MAX 2.5 KG",
+    "price": 2160.0
+  },
+  {
     "barcode": "30002654",
     "name": "HOROZ",
     "price": 100.0
@@ -19613,6 +21373,11 @@
     "barcode": "035585131191",
     "name": "KONG EMZIK",
     "price": 845.0
+  },
+  {
+    "barcode": "035585401034",
+    "name": "KONG TEKERLEK",
+    "price": 1030.0
   },
   {
     "barcode": "035585131085",
@@ -19693,6 +21458,31 @@
     "barcode": "30002890",
     "name": "AIRMESH TASMA MITA",
     "price": 175.0
+  },
+  {
+    "barcode": "30002944",
+    "name": "NUTRI KEDI MAMA 10 KG",
+    "price": 3400.0
+  },
+  {
+    "barcode": "064992723255_x000D_\n_x000D_",
+    "name": "ACANA KITTEN HINDI 2 KG",
+    "price": 2040.0
+  },
+  {
+    "barcode": "0064992541118",
+    "name": "Acana Pasifica Balıklı Tüm Irklar Yetişkin Köpek M",
+    "price": 6390.0
+  },
+  {
+    "barcode": "064992184124",
+    "name": "ORIJEN 11.4 KG",
+    "price": 8020.0
+  },
+  {
+    "barcode": "30002975",
+    "name": "NEXGARD 30 60 KG IC DIS PARAZIT",
+    "price": 1300.0
   },
   {
     "barcode": "8690286595424",
@@ -19785,6 +21575,16 @@
     "price": 45.0
   },
   {
+    "barcode": "064992714369",
+    "name": "ACANA TAVUK ETLI YETISKIN KEDI MAMASI 1.8 KG",
+    "price": 1725.0
+  },
+  {
+    "barcode": "064992723972",
+    "name": "ACANA KISIR TAVUK&SOMON 1.8 KG",
+    "price": 1725.0
+  },
+  {
     "barcode": "6927053031727",
     "name": "NUNBELL PELUŞ PİZZA",
     "price": 230.0
@@ -19798,6 +21598,51 @@
     "barcode": "5065000941819",
     "name": "ANIMOLOGY TOP DOG TÜY BAKIM KREMİ",
     "price": 690.0
+  },
+  {
+    "barcode": "810077601228",
+    "name": "STANLEY PELUŞ OYUNCAK",
+    "price": 1540.0
+  },
+  {
+    "barcode": "810077600818",
+    "name": "KAHVE OYUNCAK PELUŞ",
+    "price": 1390.0
+  },
+  {
+    "barcode": "857407008999",
+    "name": "STARBARKS PELUŞ OYUNCAK",
+    "price": 1360.0
+  },
+  {
+    "barcode": "857407008326",
+    "name": "KOKTEYL PELUŞ OYUNCAK",
+    "price": 1360.0
+  },
+  {
+    "barcode": "857407008494",
+    "name": "PELUŞ LUVITON OYUNCAK",
+    "price": 1360.0
+  },
+  {
+    "barcode": "710228858436",
+    "name": "STARBARKS KAHVE PELUŞ",
+    "price": 1360.0
+  },
+  {
+    "barcode": "810077600504",
+    "name": "PELUŞ ÇANTA",
+    "price": 1360.0
+  },
+  {
+    "barcode": "857407008197",
+    "name": "PELUŞ CORONA",
+    "price": 1360.0
+  },
+  {
+    "barcode": "857407008937",
+    "name": "PELUŞ KOKTEYL",
+    "price": 1360.0
   },
   {
     "barcode": "6930693253763",
@@ -19915,6 +21760,11 @@
     "price": 580.0
   },
   {
+    "barcode": "8886467522048",
+    "name": "PAWİSE SOĞUTUCU YATAK 90x50",
+    "price": 1175.0
+  },
+  {
     "barcode": "8690286595431",
     "name": "CHALLANGE  KEDİ SIĞIR ET KONSERVE 400 G",
     "price": 50.0
@@ -19960,6 +21810,11 @@
     "price": 95.0
   },
   {
+    "barcode": "8009632051925",
+    "name": "GIMDOG LAVANTA PED 50 li 60x90",
+    "price": 1350.0
+  },
+  {
     "barcode": "8683930600247",
     "name": "ÇELİK BAHÇE BAĞLAMA DEMİR 3 METRE",
     "price": 600.0
@@ -19968,6 +21823,21 @@
     "barcode": "8683930600254",
     "name": "ÇELİK BAHÇE BAĞLAMA DEMİR 4.5 METRE",
     "price": 650.0
+  },
+  {
+    "barcode": "8682232210826",
+    "name": "CAT HOUSE OVAL BÜYÜK TIRMALAMA",
+    "price": 2500.0
+  },
+  {
+    "barcode": "8682232210932",
+    "name": "CAT HOUSE OVAL TIRMALAMA 128 CM",
+    "price": 2500.0
+  },
+  {
+    "barcode": "30003156",
+    "name": "TEKERLEKLİ ÇANTA",
+    "price": 2000.0
   },
   {
     "barcode": "8684207638208",
@@ -20075,6 +21945,16 @@
     "price": 85.0
   },
   {
+    "barcode": "3182550908450",
+    "name": "ROYAL CANIN POMERIAN 3 KG",
+    "price": 1745.0
+  },
+  {
+    "barcode": "868223210888",
+    "name": "CAT HOUSE KEDİ EV",
+    "price": 1900.0
+  },
+  {
     "barcode": "8684641691692",
     "name": "LUCKYOAW  KEDI TASMA",
     "price": 65.0
@@ -20098,6 +21978,71 @@
     "barcode": "7613287070722",
     "name": "GOURMET SOMON YAŞ MAMA",
     "price": 110.0
+  },
+  {
+    "barcode": "8698995032834",
+    "name": "REFLEX PLUS KUZU ETLİ",
+    "price": 32.0
+  },
+  {
+    "barcode": "8698995032810",
+    "name": "REFLEX PLUS DANA ETLİ",
+    "price": 32.0
+  },
+  {
+    "barcode": "8690286595547",
+    "name": "CHALLENGE KEDI POUCH SOMONLU 85 G",
+    "price": 23.0
+  },
+  {
+    "barcode": "8690286595530",
+    "name": "CHALLENGE KEDI POUCH SIĞIR 85 G",
+    "price": 23.0
+  },
+  {
+    "barcode": "8690286595523",
+    "name": "CHALLENGE KEDI POUCH TAVUK CIGER 85 G",
+    "price": 23.0
+  },
+  {
+    "barcode": "8690286595516",
+    "name": "CHALLENGE KEDI POUCH TAVUK 85 G",
+    "price": 23.0
+  },
+  {
+    "barcode": "30004115",
+    "name": "ADVANTIX 25 40 DIŞ PARAZIT",
+    "price": 700.0
+  },
+  {
+    "barcode": "8682291409896",
+    "name": "ROYALIST BISKUVI TAVUK SARGILI 100 G",
+    "price": 100.0
+  },
+  {
+    "barcode": "8682291409902",
+    "name": "ROYALIST BISKUVI DUCK SARGILI 100 G",
+    "price": 110.0
+  },
+  {
+    "barcode": "8682291409889",
+    "name": "ROYALIST ÇORBA TAVUK HAVUÇ 50 G",
+    "price": 45.0
+  },
+  {
+    "barcode": "8682291409872",
+    "name": "ROYALIST ÇORBA TAVUK KOKONAT 50 G",
+    "price": 45.0
+  },
+  {
+    "barcode": "8682291409865",
+    "name": "ROYALIST ÇORBA TAVUK KIZILCIK 50 G",
+    "price": 45.0
+  },
+  {
+    "barcode": "8681999484662",
+    "name": "CANTA",
+    "price": 970.0
   },
   {
     "barcode": "8682503500311",
@@ -20205,6 +22150,11 @@
     "price": 230.0
   },
   {
+    "barcode": "3182550704625",
+    "name": "ROYAL CANIN INDOOR 2 KG",
+    "price": 1225.0
+  },
+  {
     "barcode": "4820111141456",
     "name": "MISS KISS TAVUKLU 100 G",
     "price": 25.0
@@ -20243,6 +22193,11 @@
     "barcode": "30003361",
     "name": "ADVANCE STR HİNDİ 0,5 KG",
     "price": 220.0
+  },
+  {
+    "barcode": "7613035846685",
+    "name": "PRO PLAN KUZU 1.5 KG",
+    "price": 1010.0
   },
   {
     "barcode": "30003422",
@@ -20305,6 +22260,11 @@
     "price": 380.0
   },
   {
+    "barcode": "064992542207",
+    "name": "ACANA GRASSLAND KUZU 2 KG",
+    "price": 1810.0
+  },
+  {
     "barcode": "4002064416878",
     "name": "SHINYCAT TAVUK KARIDES 70 G",
     "price": 75.0
@@ -20325,6 +22285,11 @@
     "price": 75.0
   },
   {
+    "barcode": "8003507973893",
+    "name": "GLUVE TAŞIMA NO 3",
+    "price": 1200.0
+  },
+  {
     "barcode": "30003545",
     "name": "FURMINATOR CAT SMALL SHORT HAIR",
     "price": 300.0
@@ -20338,6 +22303,21 @@
     "barcode": "8680782133916",
     "name": "DOGGIE SUNGER FILTRE",
     "price": 200.0
+  },
+  {
+    "barcode": "8410650009346",
+    "name": "ADVANCE PUPPY MINI SOMON 3 KG",
+    "price": 1460.0
+  },
+  {
+    "barcode": "8410650162270",
+    "name": "ADVANCE KISIR HINDI 3 KG",
+    "price": 1600.0
+  },
+  {
+    "barcode": "8410650173559",
+    "name": "ADVANCE MED:ADULT SOMON 12 KG",
+    "price": 3754.0
   },
   {
     "barcode": "8003507997301",
@@ -20430,6 +22410,11 @@
     "price": 285.0
   },
   {
+    "barcode": "052742071381",
+    "name": "HILL'S STR SOMON 3 KG",
+    "price": 1630.0
+  },
+  {
     "barcode": "8682315529821",
     "name": "NATURA KAPALI KEDI TUVALETI",
     "price": 700.0
@@ -20505,6 +22490,11 @@
     "price": 65.0
   },
   {
+    "barcode": "7613036529150",
+    "name": "PROPLAN KEDI DERMA CARE SOMON 1.5 KG",
+    "price": 1010.0
+  },
+  {
     "barcode": "8662112931447",
     "name": "CELIK MAMA KABI 64 OZ",
     "price": 320.0
@@ -20518,6 +22508,11 @@
     "barcode": "7613034767646",
     "name": "PROPLAN KITTEN POUNCH 85 G",
     "price": 50.0
+  },
+  {
+    "barcode": "30003798",
+    "name": "ORIJIN YUKSLELTIIR MAMA KABI BUYUK",
+    "price": 1750.0
   },
   {
     "barcode": "8684641690404",
@@ -20688,6 +22683,11 @@
     "barcode": "8606014102055",
     "name": "N&D TAVUK NAR YAŞ MAMA 70G",
     "price": 105.0
+  },
+  {
+    "barcode": "8684122208449",
+    "name": "KEDI KÖPEK MAMA VE SU KABI OTOMATİK",
+    "price": 7375.0
   },
   {
     "barcode": "8682291407649",
