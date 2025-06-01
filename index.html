@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pets Carnival Barkod Sistemi – Yenilenmiş</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pets Carnival Barkod Sistemi – ZXing Entegrasyonlu</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,36 +57,26 @@
     .search-box button:hover {
       background: #e06c00;
     }
-    .camera-btn {
-      margin-bottom: 1.5rem;
-    }
-    .camera-btn button {
-      display: block;
-      width: 70%;
-      max-width: 300px;
-      padding: 0.75rem;
-      font-size: 1.1rem;
-      background: #0073e6;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background 0.2s;
-      margin: 0 auto;
-      cursor: pointer;
-    }
-    .camera-btn button:hover {
-      background: #005bb5;
-    }
-    #reader {
+    .camera-container {
+      position: relative;
       width: 90%;
       max-width: 320px;
-      height: 240px;
       margin: 0 auto 1.5rem;
-      background: #000;
-      position: relative;
-      overflow: hidden;
       border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+    }
+    video#video {
+      width: 100%;
+      height: auto;
+      transform: scaleX(-1); /* mirror for front, but ZXing flips automatically if needed */
+    }
+    canvas#overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
     .result {
       margin-top: 1rem;
@@ -115,9 +105,14 @@
       color: #333;
       border-top: 1px solid #ddd;
     }
+    .loading {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
   </style>
-  <!-- QuaggaJS kütüphanesi -->
-  <script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
+  <!-- ZXing JavaScript UMD paketi -->
+  <script src="https://unpkg.com/@zxing/library@0.18.7/umd/index.min.js"></script>
 </head>
 <body>
 
@@ -131,12 +126,11 @@
     <button onclick="manualSearch()">Ara</button>
   </div>
 
-  <div class="camera-btn">
-    <button onclick="startScanner()">📷 Kamera ile okut</button>
+  <div class="camera-container" id="cameraContainer">
+    <video id="video" muted playsinline></video>
+    <canvas id="overlay"></canvas>
   </div>
-
-  <!-- QuaggaJS video + debug çizimleri bu alanda gösterilecek -->
-  <div id="reader"></div>
+  <div class="loading" id="loadingMessage">Kamera açılıyor, lütfen bekleyiniz...</div>
 
   <div class="result" id="result">Ürün bekleniyor…</div>
 
@@ -145,108 +139,108 @@
   </footer>
 
   <script>
-    // products.json'dan yükleme
+    // products.json'dan ürünleri belleğe al
     let products = [];
     fetch('products.json')
       .then(res => res.json())
       .then(data => {
         products = data;
-        console.log("[INFO] products.json yüklendi, toplam ürün sayısı:", products.length);
+        console.log("[INFO] products.json yüklendi:", products.length, "ürün bulundu.");
       })
-      .catch(err => console.error("[ERROR] products.json okunamadı:", err));
+      .catch(err => console.error("[ERROR] products.json yüklenirken hata:", err));
 
-    // Manuel arama
+    // Manuel arama işlevi
     function manualSearch() {
-      const code = document.getElementById('barcodeInput').value;
+      const code = document.getElementById('barcodeInput').value.trim();
       lookup(code);
     }
 
     // Barkodu normalize edip JSON'da arar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
-      console.log("[DEBUG] Manuel arama barkod:", normalized);
+      console.log("[DEBUG] Manuel aranan barkod:", normalized);
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
       const el = document.getElementById('result');
       if (p) {
         el.innerHTML = `<strong>${p.name}</strong><br><span class="price">₺ ${p.price.toFixed(2)}</span>`;
-        Quagga.stop(); // Ürün bulunduğunda taramayı durdur
+        stopDecoding();
       } else {
-        el.textContent = 'Ürün bulunamadı, lütfen barkodu tekrar okutun.';
-        // Quagga taramaya devam eder, böylece kullanıcının yeniden okutmasına izin verir
+        el.textContent = 'Ürün bulunamadı, lütfen tekrar okutunuz.';
       }
     }
 
-    // QuaggaJS başlatıldı mı kontrolü
-    let quaggaInited = false;
+    // ZXing objesi
+    let codeReader = null;
+    let selectedDeviceId = null;
 
-    // Kamera ile barkod okutma işlevi
-    function startScanner() {
-      const readerDiv = document.getElementById('reader');
+    async function startScanner() {
+      const resultEl = document.getElementById('result');
+      const loadingEl = document.getElementById('loadingMessage');
+      loadingEl.textContent = "Kamera başlatılıyor...";
 
-      if (!quaggaInited) {
-        quaggaInited = true;
-        console.log("[INFO] Quagga başlatılıyor...");
-        Quagga.init({
-          inputStream: {
-            name: "Live",
-            type: "LiveStream",
-            target: readerDiv,
-            constraints: {
-              facingMode: { exact: "environment" },
-              width: { ideal: 1280 },
-              height: { ideal: 720 }
-            }
-          },
-          locator: {
-            patchSize: "medium",
-            halfSample: false
-          },
-          numOfWorkers: navigator.hardwareConcurrency || 4,
-          decoder: {
-            readers: [
-              "ean_reader",
-              "ean_8_reader",
-              "code_128_reader",
-              "code_39_reader",
-              "upc_reader",
-              "upc_e_reader"
-            ],
-            multiple: false
-          },
-          locate: true,
-          debug: {
-            drawBoundingBox: true,
-            showFrequency: true,
-            drawScanline: true,
-            showPattern: true
-          },
-          frequency: 8
-        }, function(err) {
-          if (err) {
-            console.error("[ERROR] Quagga init hatası:", err);
-            alert("Kamera başlatılırken bir hata oluştu:\n" + err.message);
-            return;
+      // ZXing BrowserMultiFormatReader kullan
+      codeReader = new ZXing.BrowserMultiFormatContinuousReader(null, {
+        // Dekoder ayrıntılarını özelleştirebiliriz
+        possibleFormats: [
+          ZXing.BarcodeFormat.EAN_13,
+          ZXing.BarcodeFormat.EAN_8,
+          ZXing.BarcodeFormat.CODE_128,
+          ZXing.BarcodeFormat.CODE_39,
+          ZXing.BarcodeFormat.UPC_A,
+          ZXing.BarcodeFormat.UPC_E
+        ]
+      });
+
+      try {
+        // Arka kamerayı seç: 'environment'
+        const videoInputDevices = await ZXing.BrowserCodeReader.listVideoInputDevices();
+        // Cihazlar arasında 'back' veya 'environment' içeren ilkini bul
+        if (videoInputDevices.length === 0) {
+          throw new Error("Hiç video cihazı bulunamadı.");
+        }
+        const backCamera = videoInputDevices.find(device => 
+          device.label.toLowerCase().includes("back") ||
+          device.label.toLowerCase().includes("environment")
+        );
+        selectedDeviceId = backCamera ? backCamera.deviceId : videoInputDevices[0].deviceId;
+
+        // Continuous decode başlat (video içinde sürekli arar)
+        await codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+          if (result) {
+            const code = result.getText();
+            console.log("[INFO] Barkod algılandı:", code);
+            lookup(code);
           }
-          console.log("[INFO] Quagga başlatıldı, tarama başladı.");
-          Quagga.start();
+          if (err && !(err instanceof ZXing.NotFoundException)) {
+            console.error(err);
+          }
         });
 
-        Quagga.onProcessed(function(result) {
-          // Her kare işlendiğinde debug amaçlı buraya bakabilirsiniz
-        });
-
-        Quagga.onDetected(function(result) {
-          const code = result.codeResult.code;
-          console.log("[INFO] Barkod algılandı:", code);
-          lookup(code);
-        });
-
-      } else {
-        console.log("[INFO] Quagga zaten başlatılmış, tarama yeniden başlatılıyor.");
-        Quagga.start();
+        loadingEl.textContent = "Kameraya barkodu yakın. Okumaya çalışılıyor…";
+      } catch (error) {
+        console.error("[ERROR] Kamera başlatılırken hata:", error);
+        loadingEl.textContent = "Kamera açılamadı: " + error.message;
+        alert("Kamera açılamadı:\n" + error.message);
       }
     }
-  </script>
 
+    function stopDecoding() {
+      if (codeReader) {
+        codeReader.reset();
+        codeReader = null;
+        document.getElementById('loadingMessage').textContent = "Tarama durduruldu.";
+      }
+    }
+
+    // Sayfa yüklendiğinde taramayı başlat
+    window.addEventListener('load', () => {
+      startScanner();
+    });
+
+    // Sayfadan ayrılınca durdur
+    window.addEventListener('beforeunload', () => {
+      stopDecoding();
+    });
+  </script>
 </body>
 </html>
