@@ -86,10 +86,17 @@
       border-radius: 8px;
       overflow: hidden;
       background: #000;
+      display: none; /* Başlangıçta gizli */
     }
     video#video {
       width: 100%;
       height: auto;
+    }
+    .loading {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #555;
+      display: none; /* Başlangıçta gizli */
     }
     .result {
       margin-top: 1rem;
@@ -118,11 +125,6 @@
       color: #333;
       border-top: 1px solid #ddd;
     }
-    .loading {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #555;
-    }
   </style>
   <!-- ZXing JavaScript UMD paketi -->
   <script src="https://unpkg.com/@zxing/library@0.18.7/umd/index.min.js"></script>
@@ -134,17 +136,24 @@
     <span>www.petscarnival.com.tr</span>
   </header>
 
+  <!-- Manuel barkod arama kutusu -->
   <div class="search-box">
     <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
     <button onclick="manualSearch()">Ara</button>
   </div>
 
-  <!-- Kamera önizleme alanı -->
+  <!-- Kamera Aç butonu -->
+  <div class="camera-btn">
+    <button onclick="initiateScanner()">📷 Kamera Aç</button>
+  </div>
+
+  <!-- Kamera önizleme alanı (başta gizli) -->
   <div class="camera-container" id="cameraContainer">
     <video id="video" muted playsinline></video>
   </div>
   <div class="loading" id="loadingMessage">Kamera açılıyor, lütfen bekleyiniz...</div>
 
+  <!-- Okunan ürün sonucunun gösterileceği alan -->
   <div class="result" id="result">Ürün bekleniyor…</div>
 
   <footer>
@@ -169,8 +178,8 @@
     }
 
     // Barkodu normalize edip JSON'da arar
-    function lookup(code) {
-      const normalized = code.replace(/\D/g, '');
+    function lookup(rawCode) {
+      const normalized = rawCode.replace(/\D/g, '');
       console.log("[DEBUG] Manuel aranan barkod:", normalized);
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
       const el = document.getElementById('result');
@@ -184,11 +193,18 @@
 
     // ZXing objesi
     let codeReader = null;
+    let scannerStarted = false;
 
-    async function startScanner() {
-      const loadingEl = document.getElementById('loadingMessage');
+    // “Kamera Aç” butonuna basıldığında çağrılacak
+    async function initiateScanner() {
+      if (scannerStarted) {
+        return; // Zaten açıksa tekrar açma
+      }
+      scannerStarted = true;
 
-      // ZXing BrowserMultiFormatContinuousReader kullan
+      document.getElementById('cameraContainer').style.display = 'block';
+      document.getElementById('loadingMessage').style.display = 'block';
+
       codeReader = new ZXing.BrowserMultiFormatContinuousReader(null, {
         possibleFormats: [
           ZXing.BarcodeFormat.EAN_13,
@@ -201,58 +217,49 @@
       });
 
       try {
+        const loadingEl = document.getElementById('loadingMessage');
         loadingEl.textContent = "Kamera başlatılıyor...";
-        const videoInputDevices = await ZXing.BrowserCodeReader.listVideoInputDevices();
-        if (videoInputDevices.length === 0) {
+        // Tüm video input cihazlarını listele
+        const devices = await ZXing.BrowserCodeReader.listVideoInputDevices();
+        if (devices.length === 0) {
           throw new Error("Hiç video cihazı bulunamadı.");
         }
-        // Arka kamerayı seç
-        const backCamera = videoInputDevices.find(device => 
-          device.label.toLowerCase().includes("back") ||
-          device.label.toLowerCase().includes("environment")
+        // “back” veya “environment” etiketli ilk cihazı arka kamera kabul et
+        const backCamera = devices.find(d => 
+          d.label.toLowerCase().includes("back") ||
+          d.label.toLowerCase().includes("environment")
         );
-        const selectedDeviceId = backCamera
-          ? backCamera.deviceId
-          : videoInputDevices[0].deviceId;
+        const deviceId = backCamera ? backCamera.deviceId : devices[0].deviceId;
 
-        await codeReader.decodeFromVideoDevice(
-          selectedDeviceId, 
-          'video', 
-          (result, err) => {
-            if (result) {
-              const code = result.getText();
-              console.log("[INFO] Barkod algılandı:", code);
-              lookup(code);
-            }
-            if (err && !(err instanceof ZXing.NotFoundException)) {
-              console.error(err);
-            }
+        // Sürekli tarama moduna geç
+        await codeReader.decodeFromVideoDevice(deviceId, 'video', (result, err) => {
+          if (result) {
+            const codeText = result.getText();
+            console.log("[INFO] Barkod algılandı:", codeText);
+            lookup(codeText);
           }
-        );
+          if (err && !(err instanceof ZXing.NotFoundException)) {
+            console.error(err);
+          }
+        });
 
-        loadingEl.textContent = "Tarama başladı, lütfen barkodu okutun…";
+        loadingEl.textContent = "Tarama başladı, barkodu ortalayın…";
       } catch (error) {
         console.error("[ERROR] Kamera başlatılırken hata:", error);
-        loadingEl.textContent = "Kamera açılamadı: " + error.message;
+        document.getElementById('loadingMessage').textContent = "Kamera açılamadı: " + error.message;
         alert("Kamera açılamadı:\n" + error.message);
       }
     }
 
+    // Dekoderi durdurup temizler
     function stopDecoding() {
       if (codeReader) {
         codeReader.reset();
         codeReader = null;
+        scannerStarted = false;
         document.getElementById('loadingMessage').textContent = "Tarama durduruldu.";
       }
     }
-
-    // Sayfa yüklenince otomatik start
-    window.addEventListener('load', () => {
-      startScanner();
-    });
-    window.addEventListener('beforeunload', () => {
-      stopDecoding();
-    });
   </script>
 </body>
 </html>
