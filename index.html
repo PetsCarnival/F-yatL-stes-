@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pets Carnival Barkod Sistemi</title>
+  <title>Pets Carnival Barkod Sistemi – İleri Seviye</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -142,7 +142,7 @@
     <button onclick="startScanner()">📷 Kamera ile okut</button>
   </div>
 
-  <!-- QuaggaJS video + canvas debug çizimleri bu alanda gösterilecek -->
+  <!-- QuaggaJS video + debug çizimleri bu alanda gösterilecek -->
   <div id="reader"></div>
 
   <div class="result" id="result">Ürün bekleniyor…</div>
@@ -199,19 +199,19 @@
             target: readerDiv,
             constraints: {
               facingMode: { exact: "environment" }, // Arka kamerayı zorunlu seç
-              width: { min: 640 },
-              height: { min: 480 }
+              width: { ideal: 1280 },   // Daha yüksek çözünürlük
+              height: { ideal: 720 }
             }
           },
           locator: {
-            patchSize: "x-small",    // Çok küçük/eğri barkodlar için
-            halfSample: false       // Full çözünürlük
+            patchSize: "medium",    // Küçük ve eğri barkodlar için orta seviye tarama penceresi
+            halfSample: false       // Full çözünürlük: barkod çizgileri daha net olsun
           },
           numOfWorkers: navigator.hardwareConcurrency || 4,
           decoder: {
             readers: [
-              "ean_reader",
-              "ean_8_reader",
+              "ean_reader",     // EAN-13 (genel barkodlar)
+              "ean_8_reader",   // EAN-8 (çok küçük barkodlar)
               "code_128_reader",
               "code_39_reader",
               "upc_reader",
@@ -221,16 +221,16 @@
           },
           locate: true,   // Görüntüde barkodun yerini bul
           debug: {
-            drawBoundingBox: true,   // Barkodu çevreleyen kutuyu çizer
-            showFrequency: true,     // Tarama FPS bilgisini gösterir
-            drawScanline: true,      // Tarama çizgisi (scanline) çizer
-            showPattern: true,       // Bulunan barkod desenini gösterir
+            drawBoundingBox: true,
+            showFrequency: true,
+            drawScanline: true,
+            showPattern: true
           },
-          frequency: 10    // Saniyede 10 kare
+          frequency: 8    // Saniyede 8 kare (her kare daha dikkatle işlenir)
         }, function(err) {
           if (err) {
             console.error("[ERROR] Quagga init hatası:", err);
-            alert("Kamera başlatılırken bir hata oluştu: " + err.message);
+            alert("Kamera başlatılırken bir hata oluştu:\n" + err.message);
             return;
           }
           console.log("[INFO] Quagga başlatıldı, tarama başladı.");
@@ -238,8 +238,7 @@
         });
 
         Quagga.onProcessed(function(result) {
-          // Her kare işlendiğinde burası çalışır; debug çizimleri konsolda görünür
-          // İsterseniz result üzerinde örneğin edge detection çıktılarını da görebilirsiniz:
+          // Her kare işlendiğinde debug amaçlı buraya bakabilirsiniz
           // console.log("[DEBUG] İşlenen kare sonucu:", result);
         });
 
@@ -250,7 +249,7 @@
         });
 
       } else {
-        console.log("[INFO] Quagga zaten başlatılmış, doğrudan tarama başlatılıyor.");
+        console.log("[INFO] Quagga zaten başlatılmış, tarama yeniden başlatılıyor.");
         Quagga.start();
       }
     }
