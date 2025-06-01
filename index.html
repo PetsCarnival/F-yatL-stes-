@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pets Carnival Barkod Sistemi – ZXing Entegrasyonlu</title>
+  <title>Pets Carnival Barkod Sistemi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,6 +57,27 @@
     .search-box button:hover {
       background: #e06c00;
     }
+    .camera-btn {
+      margin-bottom: 1.5rem;
+    }
+    .camera-btn button {
+      display: block;
+      width: 70%;
+      max-width: 300px;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      background: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    .camera-btn button:hover {
+      background: #005bb5;
+    }
     .camera-container {
       position: relative;
       width: 90%;
@@ -69,14 +90,6 @@
     video#video {
       width: 100%;
       height: auto;
-      transform: scaleX(-1); /* mirror for front, but ZXing flips automatically if needed */
-    }
-    canvas#overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
     }
     .result {
       margin-top: 1rem;
@@ -126,9 +139,9 @@
     <button onclick="manualSearch()">Ara</button>
   </div>
 
+  <!-- Kamera önizleme alanı -->
   <div class="camera-container" id="cameraContainer">
     <video id="video" muted playsinline></video>
-    <canvas id="overlay"></canvas>
   </div>
   <div class="loading" id="loadingMessage">Kamera açılıyor, lütfen bekleyiniz...</div>
 
@@ -171,16 +184,12 @@
 
     // ZXing objesi
     let codeReader = null;
-    let selectedDeviceId = null;
 
     async function startScanner() {
-      const resultEl = document.getElementById('result');
       const loadingEl = document.getElementById('loadingMessage');
-      loadingEl.textContent = "Kamera başlatılıyor...";
 
-      // ZXing BrowserMultiFormatReader kullan
+      // ZXing BrowserMultiFormatContinuousReader kullan
       codeReader = new ZXing.BrowserMultiFormatContinuousReader(null, {
-        // Dekoder ayrıntılarını özelleştirebiliriz
         possibleFormats: [
           ZXing.BarcodeFormat.EAN_13,
           ZXing.BarcodeFormat.EAN_8,
@@ -192,31 +201,36 @@
       });
 
       try {
-        // Arka kamerayı seç: 'environment'
+        loadingEl.textContent = "Kamera başlatılıyor...";
         const videoInputDevices = await ZXing.BrowserCodeReader.listVideoInputDevices();
-        // Cihazlar arasında 'back' veya 'environment' içeren ilkini bul
         if (videoInputDevices.length === 0) {
           throw new Error("Hiç video cihazı bulunamadı.");
         }
+        // Arka kamerayı seç
         const backCamera = videoInputDevices.find(device => 
           device.label.toLowerCase().includes("back") ||
           device.label.toLowerCase().includes("environment")
         );
-        selectedDeviceId = backCamera ? backCamera.deviceId : videoInputDevices[0].deviceId;
+        const selectedDeviceId = backCamera
+          ? backCamera.deviceId
+          : videoInputDevices[0].deviceId;
 
-        // Continuous decode başlat (video içinde sürekli arar)
-        await codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
-          if (result) {
-            const code = result.getText();
-            console.log("[INFO] Barkod algılandı:", code);
-            lookup(code);
+        await codeReader.decodeFromVideoDevice(
+          selectedDeviceId, 
+          'video', 
+          (result, err) => {
+            if (result) {
+              const code = result.getText();
+              console.log("[INFO] Barkod algılandı:", code);
+              lookup(code);
+            }
+            if (err && !(err instanceof ZXing.NotFoundException)) {
+              console.error(err);
+            }
           }
-          if (err && !(err instanceof ZXing.NotFoundException)) {
-            console.error(err);
-          }
-        });
+        );
 
-        loadingEl.textContent = "Kameraya barkodu yakın. Okumaya çalışılıyor…";
+        loadingEl.textContent = "Tarama başladı, lütfen barkodu okutun…";
       } catch (error) {
         console.error("[ERROR] Kamera başlatılırken hata:", error);
         loadingEl.textContent = "Kamera açılamadı: " + error.message;
@@ -232,12 +246,10 @@
       }
     }
 
-    // Sayfa yüklendiğinde taramayı başlat
+    // Sayfa yüklenince otomatik start
     window.addEventListener('load', () => {
       startScanner();
     });
-
-    // Sayfadan ayrılınca durdur
     window.addEventListener('beforeunload', () => {
       stopDecoding();
     });
