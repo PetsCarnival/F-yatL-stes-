@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pets Carnival Barkod Sistemi</title>
   <style>
@@ -115,8 +115,15 @@
       color: #333;
       border-top: 1px solid #ddd;
     }
+    /* Quagga debug çizimleri için stil */
+    canvas.drawing, svg.drawing {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
   </style>
-  <!-- QuaggaJS kütüphanesini ekliyoruz -->
+  <!-- QuaggaJS kütüphanesi -->
   <script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
 </head>
 <body>
@@ -135,7 +142,7 @@
     <button onclick="startScanner()">📷 Kamera ile okut</button>
   </div>
 
-  <!-- QuaggaJS ile video ve canvas bu div içinde işlenecek -->
+  <!-- QuaggaJS video + canvas debug çizimleri bu alanda gösterilecek -->
   <div id="reader"></div>
 
   <div class="result" id="result">Ürün bekleniyor…</div>
@@ -145,11 +152,15 @@
   </footer>
 
   <script>
-    // JSON’dan yükleme yapıp belleğe alıyoruz
+    // products.json'dan yükleme
     let products = [];
     fetch('products.json')
       .then(res => res.json())
-      .then(data => products = data);
+      .then(data => {
+        products = data;
+        console.log("[INFO] products.json yüklendi, toplam ürün sayısı:", products.length);
+      })
+      .catch(err => console.error("[ERROR] products.json okunamadı:", err));
 
     // Manuel arama
     function manualSearch() {
@@ -157,9 +168,10 @@
       lookup(code);
     }
 
-    // Barkodu normalize edip ürünü bulur ve ekrana yazar
+    // Barkodu normalize edip JSON'da arar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
+      console.log("[DEBUG] Manuel arama barkod:", normalized);
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
       const el = document.getElementById('result');
       if (p) {
@@ -167,10 +179,10 @@
       } else {
         el.textContent = 'Ürün bulunamadı, tekrar okutunuz.';
       }
-      Quagga.stop();
+      Quagga.stop(); // Okuduktan sonra durduruyoruz
     }
 
-    // QuaggaJS başlatma durumu
+    // QuaggaJS başlatıldı mı kontrolü
     let quaggaInited = false;
 
     // Kamera ile barkod okutma işlevi
@@ -179,6 +191,7 @@
 
       if (!quaggaInited) {
         quaggaInited = true;
+        console.log("[INFO] Quagga başlatılıyor...");
         Quagga.init({
           inputStream: {
             name: "Live",
@@ -191,14 +204,14 @@
             }
           },
           locator: {
-            patchSize: "x-small",  // Küçük, eğri barkodları bulmaya yönelik
-            halfSample: false      // Tam çözünürlük: eğri yüzeyde daha net algılamak için
+            patchSize: "x-small",    // Çok küçük/eğri barkodlar için
+            halfSample: false       // Full çözünürlük
           },
           numOfWorkers: navigator.hardwareConcurrency || 4,
           decoder: {
             readers: [
-              "ean_reader",    // EAN-13 tip barkodlar
-              "ean_8_reader",  // EAN-8 (çok küçük barkodlar için)
+              "ean_reader",
+              "ean_8_reader",
               "code_128_reader",
               "code_39_reader",
               "upc_reader",
@@ -206,23 +219,38 @@
             ],
             multiple: false
           },
-          locate: true,        // Barkodun bulunduğu bölgeyi otomatik tespit et
-          frequency: 10        // Saniyede 10 kare tarasın (FPS’i biraz düşürüyoruz)
+          locate: true,   // Görüntüde barkodun yerini bul
+          debug: {
+            drawBoundingBox: true,   // Barkodu çevreleyen kutuyu çizer
+            showFrequency: true,     // Tarama FPS bilgisini gösterir
+            drawScanline: true,      // Tarama çizgisi (scanline) çizer
+            showPattern: true,       // Bulunan barkod desenini gösterir
+          },
+          frequency: 10    // Saniyede 10 kare
         }, function(err) {
           if (err) {
-            console.error("Quagga init hatası:", err);
+            console.error("[ERROR] Quagga init hatası:", err);
+            alert("Kamera başlatılırken bir hata oluştu: " + err.message);
             return;
           }
+          console.log("[INFO] Quagga başlatıldı, tarama başladı.");
           Quagga.start();
+        });
+
+        Quagga.onProcessed(function(result) {
+          // Her kare işlendiğinde burası çalışır; debug çizimleri konsolda görünür
+          // İsterseniz result üzerinde örneğin edge detection çıktılarını da görebilirsiniz:
+          // console.log("[DEBUG] İşlenen kare sonucu:", result);
         });
 
         Quagga.onDetected(function(result) {
           const code = result.codeResult.code;
+          console.log("[INFO] Barkod algılandı:", code);
           lookup(code);
         });
 
       } else {
-        // Zaten başlatıldıysa sadece çalıştırmaya devam et
+        console.log("[INFO] Quagga zaten başlatılmış, doğrudan tarama başlatılıyor.");
         Quagga.start();
       }
     }
