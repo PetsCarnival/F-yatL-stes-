@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pets Carnival Barkod Sistemi – İleri Seviye</title>
+  <title>Pets Carnival Barkod Sistemi – Yenilenmiş</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -115,13 +115,6 @@
       color: #333;
       border-top: 1px solid #ddd;
     }
-    /* Quagga debug çizimleri için stil */
-    canvas.drawing, svg.drawing {
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-    }
   </style>
   <!-- QuaggaJS kütüphanesi -->
   <script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
@@ -176,10 +169,11 @@
       const el = document.getElementById('result');
       if (p) {
         el.innerHTML = `<strong>${p.name}</strong><br><span class="price">₺ ${p.price.toFixed(2)}</span>`;
+        Quagga.stop(); // Ürün bulunduğunda taramayı durdur
       } else {
-        el.textContent = 'Ürün bulunamadı, tekrar okutunuz.';
+        el.textContent = 'Ürün bulunamadı, lütfen barkodu tekrar okutun.';
+        // Quagga taramaya devam eder, böylece kullanıcının yeniden okutmasına izin verir
       }
-      Quagga.stop(); // Okuduktan sonra durduruyoruz
     }
 
     // QuaggaJS başlatıldı mı kontrolü
@@ -198,20 +192,20 @@
             type: "LiveStream",
             target: readerDiv,
             constraints: {
-              facingMode: { exact: "environment" }, // Arka kamerayı zorunlu seç
-              width: { ideal: 1280 },   // Daha yüksek çözünürlük
+              facingMode: { exact: "environment" },
+              width: { ideal: 1280 },
               height: { ideal: 720 }
             }
           },
           locator: {
-            patchSize: "medium",    // Küçük ve eğri barkodlar için orta seviye tarama penceresi
-            halfSample: false       // Full çözünürlük: barkod çizgileri daha net olsun
+            patchSize: "medium",
+            halfSample: false
           },
           numOfWorkers: navigator.hardwareConcurrency || 4,
           decoder: {
             readers: [
-              "ean_reader",     // EAN-13 (genel barkodlar)
-              "ean_8_reader",   // EAN-8 (çok küçük barkodlar)
+              "ean_reader",
+              "ean_8_reader",
               "code_128_reader",
               "code_39_reader",
               "upc_reader",
@@ -219,14 +213,14 @@
             ],
             multiple: false
           },
-          locate: true,   // Görüntüde barkodun yerini bul
+          locate: true,
           debug: {
             drawBoundingBox: true,
             showFrequency: true,
             drawScanline: true,
             showPattern: true
           },
-          frequency: 8    // Saniyede 8 kare (her kare daha dikkatle işlenir)
+          frequency: 8
         }, function(err) {
           if (err) {
             console.error("[ERROR] Quagga init hatası:", err);
@@ -239,7 +233,6 @@
 
         Quagga.onProcessed(function(result) {
           // Her kare işlendiğinde debug amaçlı buraya bakabilirsiniz
-          // console.log("[DEBUG] İşlenen kare sonucu:", result);
         });
 
         Quagga.onDetected(function(result) {
