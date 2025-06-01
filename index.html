@@ -20,7 +20,7 @@
     }
     header img {
       height: 60px;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
     header span {
       color: #FF7F00;
@@ -36,15 +36,15 @@
     .search-box input {
       flex: 1;
       max-width: 300px;
-      padding: .75rem;
+      padding: 0.75rem;
       font-size: 1.1rem;
       border: 2px solid #FF7F00;
       border-radius: 6px;
       outline: none;
     }
     .search-box button {
-      margin-left: .5rem;
-      padding: .75rem 1.25rem;
+      margin-left: 0.5rem;
+      padding: 0.75rem 1.25rem;
       font-size: 1.1rem;
       cursor: pointer;
       background: #FF7F00;
@@ -52,9 +52,11 @@
       border: none;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background .2s;
+      transition: background 0.2s;
     }
-    .search-box button:hover { background: #e06c00; }
+    .search-box button:hover {
+      background: #e06c00;
+    }
     .camera-btn {
       margin-bottom: 1.5rem;
     }
@@ -62,18 +64,20 @@
       display: block;
       width: 70%;
       max-width: 300px;
-      padding: .75rem;
+      padding: 0.75rem;
       font-size: 1.1rem;
       background: #0073e6;
       color: white;
       border: none;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background .2s;
+      transition: background 0.2s;
       margin: 0 auto;
       cursor: pointer;
     }
-    .camera-btn button:hover { background: #005bb5; }
+    .camera-btn button:hover {
+      background: #005bb5;
+    }
     #reader {
       width: 90%;
       max-width: 320px;
@@ -93,11 +97,11 @@
     }
     .result strong {
       display: block;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       font-size: 1.6rem;
     }
     .result .price {
-      font-size: 1.8rem; /* Fiyat büyüklüğü */
+      font-size: 1.8rem; /* Fiyatı büyük gösterir */
       font-weight: bold;
       color: #333;
     }
@@ -110,47 +114,58 @@
       border-top: 1px solid #ddd;
     }
   </style>
+  <!-- html5-qrcode kütüphanesini ekliyoruz -->
   <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
 
+  <!-- HEADER: Logo ve Domain -->
   <header>
     <img src="logo.jpg" alt="Pets Carnival Logo">
     <span>www.petscarnival.com.tr</span>
   </header>
 
+  <!-- MANUEL BARKOD ARAMA -->
   <div class="search-box">
     <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
     <button onclick="manualSearch()">Ara</button>
   </div>
 
+  <!-- KAMERA İLE OKUT BUTONU -->
   <div class="camera-btn">
     <button onclick="startScanner()">📷 Kamera ile okut</button>
   </div>
 
+  <!-- Kamera Görüntüsü (başlangıçta gizli) -->
   <div id="reader"></div>
+
+  <!-- ÜRÜN BİLGİLERİNİN GÖSTERİLDİĞİ BÖLÜM -->
   <div class="result" id="result">Ürün bekleniyor…</div>
 
+  <!-- ALT NOT: Barkodsuz Ürünler -->
   <footer>
     Barkodu olmayan ürünleri lütfen bizlere sorunuz.
   </footer>
 
   <script>
+    // products.json dosyasını yükleyip belleğe alıyoruz
     let products = [];
     fetch('products.json')
       .then(res => res.json())
       .then(data => products = data);
 
+    // Manuel arama işlevi
     function manualSearch() {
-      lookup(document.getElementById('barcodeInput').value);
+      const code = document.getElementById('barcodeInput').value;
+      lookup(code);
     }
 
+    // Barkodu normalize edip ürün dizisinde arar, sonucu ekrana basar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
-      const p = products.find(x =>
-        x.barcode.replace(/\D/g, '') === normalized
-      );
+      const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
       const el = document.getElementById('result');
+
       if (p) {
         el.innerHTML = `<strong>${p.name}</strong><br><span class="price">₺ ${p.price.toFixed(2)}</span>`;
       } else {
@@ -159,22 +174,50 @@
       stopScanner();
     }
 
+    // html5-qrcode tarayıcısını kontrol eden değişken
     let scanner;
+
+    // Kamera ile barkod okutma işlevi
     function startScanner() {
+      // reader div’ini göster
       document.getElementById('reader').style.display = 'block';
+
+      // html5-qrcode nesnesini başlat
       scanner = new Html5Qrcode("reader");
-      scanner.start(
-        { facingMode: "environment" },
-        { fps: 20, qrbox: 200 },
-        decoded => lookup(decoded),
-        error => {}
-      );
+
+      Html5Qrcode.getCameras().then(cameras => {
+        // Arka kamerayı seçmeye çalış; yoksa ilk kamerayı kullan
+        const cameraId = cameras.find(cam => cam.label.toLowerCase().includes("back"))?.id || cameras[0].id;
+
+        scanner.start(
+          cameraId,
+          {
+            fps: 15,
+            qrbox: { width: 250, height: 150 }, // Küçük barkodları daha iyi algılar
+            experimentalFeatures: { useBarCodeDetectorIfSupported: true }
+          },
+          decodedText => lookup(decodedText),
+          errorMessage => {
+            // Hata mesajları için boş bırakabiliriz veya console.log yapabiliriz
+            // console.warn("Tarama hatası:", errorMessage);
+          }
+        ).catch(err => {
+          console.error("Kamera başlatılırken hata:", err);
+        });
+
+      }).catch(err => {
+        console.error("Kamera listesi alınamadı:", err);
+      });
     }
 
+    // Tarayıcıyı durdurur ve reader div’ini gizler
     function stopScanner() {
       if (scanner) {
-        scanner.stop();
-        document.getElementById('reader').style.display = 'none';
+        scanner.stop().then(() => {
+          document.getElementById('reader').style.display = 'none';
+        }).catch(err => {
+          console.error("Tarayıcı durdurulurken hata:", err);
+        });
       }
     }
   </script>
