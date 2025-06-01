@@ -80,8 +80,8 @@
     }
     #reader {
       width: 90%;
-      max-width: 320px;    /* Küçültülmüş genişlik */
-      height: 240px;       /* Küçültülmüş yükseklik */
+      max-width: 320px;
+      height: 240px;
       margin: 0 auto 1.5rem;
       background: #000;
       position: relative;
@@ -145,24 +145,23 @@
   </footer>
 
   <script>
-    // products.json'dan yükleme yapıp belleğe alıyoruz
+    // JSON’dan yükleme yapıp belleğe alıyoruz
     let products = [];
     fetch('products.json')
       .then(res => res.json())
       .then(data => products = data);
 
-    // Manuel arama işlevi
+    // Manuel arama
     function manualSearch() {
       const code = document.getElementById('barcodeInput').value;
       lookup(code);
     }
 
-    // Barkodu normalize edip ürün dizisinde arar, sonucu ekrana basar
+    // Barkodu normalize edip ürünü bulur ve ekrana yazar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
       const el = document.getElementById('result');
-
       if (p) {
         el.innerHTML = `<strong>${p.name}</strong><br><span class="price">₺ ${p.price.toFixed(2)}</span>`;
       } else {
@@ -171,7 +170,7 @@
       Quagga.stop();
     }
 
-    // QuaggaJS tarayıcısını kontrol eden değişken
+    // QuaggaJS başlatma durumu
     let quaggaInited = false;
 
     // Kamera ile barkod okutma işlevi
@@ -186,20 +185,20 @@
             type: "LiveStream",
             target: readerDiv,
             constraints: {
-              facingMode: "environment", // Arka kamerayı zorunlu seç
+              facingMode: { exact: "environment" }, // Arka kamerayı zorunlu seç
               width: { min: 640 },
               height: { min: 480 }
             }
           },
           locator: {
-            patchSize: "small",   // Küçük barkodları yakalamayı kolaylaştırır
-            halfSample: true      // Mobil cihaz performansı için görüntüyü yarıya indir
+            patchSize: "x-small",  // Küçük, eğri barkodları bulmaya yönelik
+            halfSample: false      // Tam çözünürlük: eğri yüzeyde daha net algılamak için
           },
           numOfWorkers: navigator.hardwareConcurrency || 4,
           decoder: {
             readers: [
-              "ean_reader",     // EAN-13 (genel barkodlar)
-              "ean_8_reader",   // EAN-8 (küçük barkodlar)
+              "ean_reader",    // EAN-13 tip barkodlar
+              "ean_8_reader",  // EAN-8 (çok küçük barkodlar için)
               "code_128_reader",
               "code_39_reader",
               "upc_reader",
@@ -207,7 +206,8 @@
             ],
             multiple: false
           },
-          locate: true   // Görüntü içindeki barkodun yerini otomatik bul
+          locate: true,        // Barkodun bulunduğu bölgeyi otomatik tespit et
+          frequency: 10        // Saniyede 10 kare tarasın (FPS’i biraz düşürüyoruz)
         }, function(err) {
           if (err) {
             console.error("Quagga init hatası:", err);
@@ -222,7 +222,7 @@
         });
 
       } else {
-        // Daha önceden başlatıldıysa sadece çalıştır
+        // Zaten başlatıldıysa sadece çalıştırmaya devam et
         Quagga.start();
       }
     }
