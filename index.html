@@ -101,7 +101,7 @@
       font-size: 1.6rem;
     }
     .result .price {
-      font-size: 1.8rem; /* Fiyatı büyük gösterir */
+      font-size: 1.8rem;
       font-weight: bold;
       color: #333;
     }
@@ -114,7 +114,6 @@
       border-top: 1px solid #ddd;
     }
   </style>
-  <!-- html5-qrcode kütüphanesini ekliyoruz -->
   <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
@@ -199,7 +198,6 @@
           decodedText => lookup(decodedText),
           errorMessage => {
             // Hata mesajları için boş bırakabiliriz veya console.log yapabiliriz
-            // console.warn("Tarama hatası:", errorMessage);
           }
         ).catch(err => {
           console.error("Kamera başlatılırken hata:", err);
