@@ -118,48 +118,39 @@
 </head>
 <body>
 
-  <!-- HEADER: Logo ve Domain -->
   <header>
     <img src="logo.jpg" alt="Pets Carnival Logo">
     <span>www.petscarnival.com.tr</span>
   </header>
 
-  <!-- MANUEL BARKOD ARAMA -->
   <div class="search-box">
     <input type="text" id="barcodeInput" placeholder="Barkod ile ara">
     <button onclick="manualSearch()">Ara</button>
   </div>
 
-  <!-- KAMERA İLE OKUT BUTONU -->
   <div class="camera-btn">
     <button onclick="startScanner()">📷 Kamera ile okut</button>
   </div>
 
-  <!-- Kamera Görüntüsü (başlangıçta gizli) -->
   <div id="reader"></div>
 
-  <!-- ÜRÜN BİLGİLERİNİN GÖSTERİLDİĞİ BÖLÜM -->
   <div class="result" id="result">Ürün bekleniyor…</div>
 
-  <!-- ALT NOT: Barkodsuz Ürünler -->
   <footer>
     Barkodu olmayan ürünleri lütfen bizlere sorunuz.
   </footer>
 
   <script>
-    // products.json dosyasını yükleyip belleğe alıyoruz
     let products = [];
     fetch('products.json')
       .then(res => res.json())
       .then(data => products = data);
 
-    // Manuel arama işlevi
     function manualSearch() {
       const code = document.getElementById('barcodeInput').value;
       lookup(code);
     }
 
-    // Barkodu normalize edip ürün dizisinde arar, sonucu ekrana basar
     function lookup(code) {
       const normalized = code.replace(/\D/g, '');
       const p = products.find(x => x.barcode.replace(/\D/g, '') === normalized);
@@ -173,32 +164,24 @@
       stopScanner();
     }
 
-    // html5-qrcode tarayıcısını kontrol eden değişken
     let scanner;
 
-    // Kamera ile barkod okutma işlevi
     function startScanner() {
-      // reader div’ini göster
       document.getElementById('reader').style.display = 'block';
-
-      // html5-qrcode nesnesini başlat
       scanner = new Html5Qrcode("reader");
 
       Html5Qrcode.getCameras().then(cameras => {
-        // Arka kamerayı seçmeye çalış; yoksa ilk kamerayı kullan
         const cameraId = cameras.find(cam => cam.label.toLowerCase().includes("back"))?.id || cameras[0].id;
 
         scanner.start(
           cameraId,
           {
             fps: 15,
-            qrbox: { width: 250, height: 150 }, // Küçük barkodları daha iyi algılar
+            qrbox: { width: 250, height: 150 },
             experimentalFeatures: { useBarCodeDetectorIfSupported: true }
           },
           decodedText => lookup(decodedText),
-          errorMessage => {
-            // Hata mesajları için boş bırakabiliriz veya console.log yapabiliriz
-          }
+          errorMessage => {}
         ).catch(err => {
           console.error("Kamera başlatılırken hata:", err);
         });
@@ -208,7 +191,6 @@
       });
     }
 
-    // Tarayıcıyı durdurur ve reader div’ini gizler
     function stopScanner() {
       if (scanner) {
         scanner.stop().then(() => {
